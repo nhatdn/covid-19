@@ -1,0 +1,18 @@
+Lưu cookie
+Chuyển trang
+Phân quyền thông qua tên
+Mã hóa bằng MD5 (username và password).
+
+
+Thu thập số lượng khách hàng
+số lượng tài khoản
+số lượng đơn hàng
+Khiếu nại
+
+json
+
+
+stringtify
+pasre
+
+axios

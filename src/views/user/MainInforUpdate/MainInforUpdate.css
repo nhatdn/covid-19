@@ -1,0 +1,135 @@
+.MainInforUpdate {
+  font-family: 'Open Sans';
+}
+.h3 {
+  font-size: 20px;
+  font-weight: bold;
+}
+.container-title {
+  background-color: #ed4d27;
+  height: 90px;
+  align-items: center;
+}
+.title h2 {
+  color: #ffffff;
+  line-height: 90px;
+  margin: 0;
+  font-size: 20px;
+}
+.intro {
+  color: #ed4d27;
+  padding: 45px 0 0;
+}
+.intro span {
+  font-size: 14px;
+  line-height: 33px;
+  color: #c4c4c4;
+}
+.container-form span {
+  color: #c4c4c4;
+}
+.form-1 {
+  margin-top: 40px;
+}
+.form-2 {
+  margin-top: 40px;
+}
+.child-form {
+  border: 1px solid #ed4d27;
+  border-radius: 0 0 15px 15px;
+  background-color: #fff;
+  padding: 0 50px 25px;
+}
+.child-form-1 {
+  padding-bottom: 107px;
+}
+.child-form-title {
+  background-color: #ed4d27;
+  border-radius: 15px 15px 0 0;
+  padding: 20px 50px;
+  margin: 0;
+  color: #ffffff;
+}
+.container-form {
+  padding-top: 30px;
+}
+.title-box {
+  margin-bottom: 20px;
+}
+.title-box label {
+  font-weight: 600;
+}
+.box {
+  margin-bottom: 40px;
+}
+.box input {
+  width: 100%;
+  border: 1px solid #ed4d27;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 10px;
+}
+.container-btn {
+  margin: 60px 0;
+  text-align: center;
+}
+.btn-submit {
+  background: #32cb00;
+  border-radius: 15px;
+  padding: 20px 60px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #ffffff;
+}
+/* Hover */
+@media (min-width: 1024px) {
+  .btn:hover {
+    color: #ee4d2d;
+  }
+}
+/* Max Width: 767px */
+@media (max-width: 767px) {
+  .h3 {
+    font-size: 16px;
+  }
+  .container-title {
+    height: 80px;
+  }
+  .title h2 {
+    line-height: 80px;
+    font-size: 18px;
+  }
+  .intro {
+    padding: 25px 0;
+  }
+  .form-1 {
+    margin-top: 0;
+  }
+  .form-2 {
+    margin-top: 0;
+  }
+  .child-form-title {
+    padding: 15px 30px;
+  }
+  .child-form {
+    padding: 0 30px;
+  }
+  .child-form-1 {
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+  }
+  .container-form {
+    padding-top: 20px;
+  }
+  .box {
+    margin-bottom: 25px;
+  }
+  .container-btn {
+    margin: 30px 0;
+  }
+  .btn-submit {
+    padding: 15px 50px;
+    font-size: 16px;
+  }
+}

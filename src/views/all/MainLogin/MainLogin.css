@@ -1,0 +1,191 @@
+.MainLogin,
+.container,
+.container-fuild,
+.mb-3 {
+  min-height: auto !important;
+}
+
+.mb-3 {
+  background-image: url('../../../assets/login/background.jpg');
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.MainLogin {
+  font-family: 'Open Sans';
+}
+.MainLogin,
+.container,
+.container-fuild,
+.mb-3 {
+  min-height: calc(100vh - 65px);
+}
+.mb-3 {
+  margin: 0px;
+}
+
+.form-login {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  margin-left: 60px;
+}
+.login-form-detail {
+  width: 400px;
+  min-height: 100px;
+  padding: 32px 24px;
+  text-align: center;
+  background: #fff;
+  border-radius: 10px;
+  margin: 24px;
+  align-self: center;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.login-form-detail .Heading {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 35px;
+  line-height: 48px;
+}
+
+.form-group {
+  display: flex;
+  margin-bottom: 16px;
+  flex-direction: column;
+}
+.form-label,
+.form-message {
+  text-align: left;
+}
+
+.form-label {
+  font-weight: 450;
+  font-size: 1.4rem;
+  line-height: 1.8rem;
+  padding-bottom: 6px;
+}
+
+.inputLux {
+  display: inline-block;
+}
+
+.form-control {
+  height: 40px;
+  padding: 12px 15px;
+  border: 1px solid #c4c4c4;
+  box-sizing: border-box;
+  border-radius: 4px;
+  outline: none;
+  font-size: 1rem;
+}
+.form-control:hover {
+  border-color: #ee4d2d;
+}
+
+.form-group.invalid .form-control {
+  border-color: #f33a58;
+}
+
+.form-group.invalid .form-message {
+  color: #f33a58;
+}
+
+.form-message {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+  padding: 4px 0 0;
+}
+
+.form-submit {
+  outline: none;
+  background-color: #ee4d2d;
+  margin-top: -12px;
+  padding: 12px 16px;
+  font-weight: 600;
+  color: #fff;
+  border: none;
+  width: 100%;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 10px;
+  line-height: revert;
+  transition: background-color 0.5s;
+}
+.form-submit:hover {
+  background: #e57660;
+}
+
+.check-save {
+  display: flex;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+#btn-check {
+  position: relative;
+  margin-right: 8px;
+  top: 6px;
+  background: #c4c4c4;
+  border: 1px solid #000000;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+
+.checkmark {
+  font-size: 1rem;
+  font-family: 'Open Sans';
+  font-style: normal;
+}
+
+.spacer {
+  margin-top: 36px;
+}
+
+.togglePassword {
+  position: relative;
+  top: -29px;
+  margin-left: 315px;
+  cursor: pointer;
+}
+
+/*Media Querie*/
+/* PC RESPONSIVE */
+@media (min-width: 1024px) {
+}
+
+/* Tablet responsive */
+@media (min-width: 740px) and (max-width: 1023px) {
+  .form-group .form-label {
+    margin: 0;
+  }
+  .form-control {
+    margin-bottom: 10px;
+  }
+  .togglePassword {
+    top: -38px;
+  }
+
+  .form-login {
+    margin-left: -14px;
+  }
+  .mb-3 {
+    background-size: cover;
+  }
+}
+/* mobile responsive */
+@media (max-width: 740px) {
+  .mb-3 {
+    background-size: cover;
+  }
+}
+.form-login {
+  margin-left: 12px;
+}
+.login-form-detail {
+  position: relative;
+  top: -24px;
+}

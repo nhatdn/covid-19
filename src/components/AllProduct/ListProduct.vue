@@ -1,0 +1,904 @@
+<template>
+  <div class="ListProduct">
+    <div class="home-filter">
+      <span class="home-filter__laber hide-on-mobil-tablet">Sắp Xếp Theo</span>
+      <b-button class="btn btn-active" variant="light">Phổ Biến</b-button>
+      <button class="btn">Mới Nhất</button>
+      <button class="btn">Bán Chạy</button>
+      <div class="select-input">
+        <lable class="select-input__label">Giá</lable>
+        <b-icon
+          class="chevron-down"
+          icon="chevron-down"
+          id="chevron-down"
+        ></b-icon>
+        <ul class="select-input__list">
+          <li class="select-input__item">
+            <a href="" class="select-input__link text-decoration-none"
+              >giá thấp đến cao</a
+            >
+            <a href="" class="select-input__link text-decoration-none"
+              >giá cao đến thấp</a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="home-filter__page-control">
+        <a href="" class="home-filter__page-btn">
+          <b-icon
+            class="chevron-left"
+            icon="chevron-left"
+            id="chevron-left"
+          ></b-icon>
+        </a>
+        <a href="" class="home-filter__page-btn">
+          <b-icon
+            class="chevron-right"
+            icon="chevron-right"
+            id="chevron-right"
+          ></b-icon>
+        </a>
+      </div>
+    </div>
+
+    <div
+      class="home-product d-xl-flex flex-wrap d-sm-flex justify-content-center"
+    >
+      <div class="col-xxl-3 col-md-4 col-sm-3">
+        <div class="home-product__item">
+          <div class="home-product__img">
+            <a class="home-product__img--link" href="">
+              <img
+                class="home-product__img--title"
+                src="../../assets/product/fragrantRice.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="home-product__content">
+            <span class="home-product__content--title">gạo 8 thơm (1kg)</span>
+          </div>
+          <div class="home-product__price">
+            <span class="home-product__price--cg">18.000đ</span>
+          </div>
+          <div class="home-product__category">
+            <button class="home-product__category--btn">-</button>
+            <span class="home-product__category--count">1</span>
+            <button class="home-product__category--btn">+</button>
+            <div class="home-product__icon">
+              <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
+            </div>
+          </div>
+          <div class="home-product-item__top">
+            <span class="home-product-item__top-precent">Top</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-3 col-md-4 col-sm-3">
+        <div class="home-product__item">
+          <div class="home-product__img">
+            <a class="home-product__img--link" href="">
+              <img
+                class="home-product__img--title"
+                src="../../assets/product/fragrantRice.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="home-product__content">
+            <span class="home-product__content--title">gạo 8 thơm (1kg)</span>
+          </div>
+          <div class="home-product__price">
+            <span class="home-product__price--cg">18.000đ</span>
+          </div>
+          <div class="home-product__category">
+            <button class="home-product__category--btn">-</button>
+            <span class="home-product__category--count">1</span>
+            <button class="home-product__category--btn">+</button>
+            <div class="home-product__icon">
+              <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
+            </div>
+          </div>
+          <div class="home-product-item__top">
+            <span class="home-product-item__top-precent">Top</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-3 col-md-4 col-sm-3">
+        <div class="home-product__item">
+          <div class="home-product__img">
+            <a class="home-product__img--link" href="">
+              <img
+                class="home-product__img--title"
+                src="../../assets/product/fragrantRice.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="home-product__content">
+            <span class="home-product__content--title">gạo 8 thơm (1kg)</span>
+          </div>
+          <div class="home-product__price">
+            <span class="home-product__price--cg">18.000đ</span>
+          </div>
+          <div class="home-product__category">
+            <button class="home-product__category--btn">-</button>
+            <span class="home-product__category--count">1</span>
+            <button class="home-product__category--btn">+</button>
+            <div class="home-product__icon">
+              <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
+            </div>
+          </div>
+          <div class="home-product-item__top">
+            <span class="home-product-item__top-precent">Top</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-3 col-md-4 col-sm-3">
+        <div class="home-product__item">
+          <div class="home-product__img">
+            <a class="home-product__img--link" href="">
+              <img
+                class="home-product__img--title"
+                src="../../assets/product/fragrantRice.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="home-product__content">
+            <span class="home-product__content--title">gạo 8 thơm (1kg)</span>
+          </div>
+          <div class="home-product__price">
+            <span class="home-product__price--cg">18.000đ</span>
+          </div>
+          <div class="home-product__category">
+            <button class="home-product__category--btn">-</button>
+            <span class="home-product__category--count">1</span>
+            <button class="home-product__category--btn">+</button>
+            <div class="home-product__icon">
+              <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
+            </div>
+          </div>
+          <div class="home-product-item__top">
+            <span class="home-product-item__top-precent">Top</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-3 col-md-4 col-sm-3">
+        <div class="home-product__item">
+          <div class="home-product__img">
+            <a class="home-product__img--link" href="">
+              <img
+                class="home-product__img--title"
+                src="../../assets/product/fragrantRice.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="home-product__content">
+            <span class="home-product__content--title">gạo 8 thơm (1kg)</span>
+          </div>
+          <div class="home-product__price">
+            <span class="home-product__price--cg">18.000đ</span>
+          </div>
+          <div class="home-product__category">
+            <button class="home-product__category--btn">-</button>
+            <span class="home-product__category--count">1</span>
+            <button class="home-product__category--btn">+</button>
+            <div class="home-product__icon">
+              <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
+            </div>
+          </div>
+          <div class="home-product-item__top">
+            <span class="home-product-item__top-precent">Top</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-3 col-md-4 col-sm-3">
+        <div class="home-product__item">
+          <div class="home-product__img">
+            <a class="home-product__img--link" href="">
+              <img
+                class="home-product__img--title"
+                src="../../assets/product/fragrantRice.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="home-product__content">
+            <span class="home-product__content--title">gạo 8 thơm (1kg)</span>
+          </div>
+          <div class="home-product__price">
+            <span class="home-product__price--cg">18.000đ</span>
+          </div>
+          <div class="home-product__category">
+            <button class="home-product__category--btn">-</button>
+            <span class="home-product__category--count">1</span>
+            <button class="home-product__category--btn">+</button>
+            <div class="home-product__icon">
+              <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
+            </div>
+          </div>
+          <div class="home-product-item__top">
+            <span class="home-product-item__top-precent">Top</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-3 col-md-4 col-sm-3">
+        <div class="home-product__item">
+          <div class="home-product__img">
+            <a class="home-product__img--link" href="">
+              <img
+                class="home-product__img--title"
+                src="../../assets/product/fragrantRice.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="home-product__content">
+            <span class="home-product__content--title">gạo 8 thơm (1kg)</span>
+          </div>
+          <div class="home-product__price">
+            <span class="home-product__price--cg">18.000đ</span>
+          </div>
+          <div class="home-product__category">
+            <button class="home-product__category--btn">-</button>
+            <span class="home-product__category--count">1</span>
+            <button class="home-product__category--btn">+</button>
+            <div class="home-product__icon">
+              <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
+            </div>
+          </div>
+          <div class="home-product-item__top">
+            <span class="home-product-item__top-precent">Top</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-3 col-md-4 col-sm-3">
+        <div class="home-product__item">
+          <div class="home-product__img">
+            <a class="home-product__img--link" href="">
+              <img
+                class="home-product__img--title"
+                src="../../assets/product/fragrantRice.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="home-product__content">
+            <span class="home-product__content--title">gạo 8 thơm (1kg)</span>
+          </div>
+          <div class="home-product__price">
+            <span class="home-product__price--cg">18.000đ</span>
+          </div>
+          <div class="home-product__category">
+            <button class="home-product__category--btn">-</button>
+            <span class="home-product__category--count">1</span>
+            <button class="home-product__category--btn">+</button>
+            <div class="home-product__icon">
+              <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
+            </div>
+          </div>
+          <div class="home-product-item__top">
+            <span class="home-product-item__top-precent">Top</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-3 col-md-4 col-sm-3">
+        <div class="home-product__item">
+          <div class="home-product__img">
+            <a class="home-product__img--link" href="">
+              <img
+                class="home-product__img--title"
+                src="../../assets/product/fragrantRice.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="home-product__content">
+            <span class="home-product__content--title">gạo 8 thơm (1kg)</span>
+          </div>
+          <div class="home-product__price">
+            <span class="home-product__price--cg">18.000đ</span>
+          </div>
+          <div class="home-product__category">
+            <button class="home-product__category--btn">-</button>
+            <span class="home-product__category--count">1</span>
+            <button class="home-product__category--btn">+</button>
+            <div class="home-product__icon">
+              <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
+            </div>
+          </div>
+          <div class="home-product-item__top">
+            <span class="home-product-item__top-precent">Top</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-3 col-md-4 col-sm-3">
+        <div class="home-product__item">
+          <div class="home-product__img">
+            <a class="home-product__img--link" href="">
+              <img
+                class="home-product__img--title"
+                src="../../assets/product/fragrantRice.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="home-product__content">
+            <span class="home-product__content--title">gạo 8 thơm (1kg)</span>
+          </div>
+          <div class="home-product__price">
+            <span class="home-product__price--cg">18.000đ</span>
+          </div>
+          <div class="home-product__category">
+            <button class="home-product__category--btn">-</button>
+            <span class="home-product__category--count">1</span>
+            <button class="home-product__category--btn">+</button>
+            <div class="home-product__icon">
+              <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
+            </div>
+          </div>
+          <div class="home-product-item__top">
+            <span class="home-product-item__top-precent">Top</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-3 col-md-4 col-sm-3">
+        <div class="home-product__item">
+          <div class="home-product__img">
+            <a class="home-product__img--link" href="">
+              <img
+                class="home-product__img--title"
+                src="../../assets/product/fragrantRice.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="home-product__content">
+            <span class="home-product__content--title">gạo 8 thơm (1kg)</span>
+          </div>
+          <div class="home-product__price">
+            <span class="home-product__price--cg">18.000đ</span>
+          </div>
+          <div class="home-product__category">
+            <button class="home-product__category--btn">-</button>
+            <span class="home-product__category--count">1</span>
+            <button class="home-product__category--btn">+</button>
+            <div class="home-product__icon">
+              <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
+            </div>
+          </div>
+          <div class="home-product-item__top">
+            <span class="home-product-item__top-precent">Top</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-xxl-3 col-md-4 col-sm-3">
+        <div class="home-product__item">
+          <div class="home-product__img">
+            <a class="home-product__img--link" href="">
+              <img
+                class="home-product__img--title"
+                src="../../assets/product/fragrantRice.jpg"
+                alt=""
+              />
+            </a>
+          </div>
+          <div class="home-product__content">
+            <span class="home-product__content--title">gạo 8 thơm (1kg)</span>
+          </div>
+          <div class="home-product__price">
+            <span class="home-product__price--cg">18.000đ</span>
+          </div>
+          <div class="home-product__category">
+            <button class="home-product__category--btn">-</button>
+            <span class="home-product__category--count">1</span>
+            <button class="home-product__category--btn">+</button>
+            <div class="home-product__icon">
+              <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
+            </div>
+          </div>
+          <div class="home-product-item__top">
+            <span class="home-product-item__top-precent">Top</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="pagination">
+      <li class="pagination-item">
+        <a href="" class="home-filter__page-btn">
+          <b-icon
+            class="chevron-left"
+            icon="chevron-left"
+            id="chevron-left"
+          ></b-icon>
+        </a>
+      </li>
+      <li class="pagination-item">
+        <a href="" class="pagination-item__link pagination-item__link--active"
+          >1</a
+        >
+      </li>
+      <li class="pagination-item">
+        <a href="" class="pagination-item__link">2</a>
+      </li>
+      <li class="pagination-item">
+        <a href="" class="pagination-item__link">3</a>
+      </li>
+      <li class="pagination-item">
+        <a href="" class="pagination-item__link">4</a>
+      </li>
+      <li class="pagination-item">
+        <a href="" class="pagination-item__link">5</a>
+      </li>
+      <li class="pagination-item">
+        <a href="" class="home-filter__page-btn">
+          <b-icon
+            class="chevron-right"
+            icon="chevron-right"
+            id="chevron-right"
+          ></b-icon>
+        </a>
+      </li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  name: "AllProduct",
+};
+</script>
+
+
+<style scoped lang="scss">
+.ListProduct {
+  font-family: "Open Sans", sans-serif;
+}
+
+.home-filter {
+  position: relative;
+  background-color: #ededed;
+  display: flex;
+  align-items: center;
+  padding: 12px 24px;
+  border-radius: 4px;
+}
+
+.home-filter__laber {
+  color: #555;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 400;
+  padding-right: 12px;
+}
+
+.btn {
+  margin: 0 6px;
+  min-width: 90px;
+  background-color: #fff;
+}
+
+.home-filter .btn-active {
+  background: #ed4d27;
+  color: #fff;
+}
+
+.select-input {
+  position: relative;
+  min-width: 180px;
+  padding: 0 12px;
+  height: 38px;
+  border-radius: 4px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.select-input:hover {
+  cursor: pointer;
+}
+
+.select-input:hover .select-input__list {
+  display: block;
+}
+
+.select-input__label {
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+.select-input__list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 39px;
+  border-radius: 4px;
+  background-color: #fff;
+  display: none;
+  z-index: 1;
+}
+
+.select-input__item {
+  padding: 12px;
+}
+
+.select-input__link {
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.2;
+  font-weight: 400;
+  display: block;
+  text-transform: capitalize;
+  margin-bottom: 10px;
+  right: 0;
+  transition: right linear 0.1s;
+}
+.select-input__link:hover {
+  cursor: pointer;
+  color: #ed4d27;
+  right: 0;
+}
+
+.home-filter__page-control {
+  display: flex;
+  margin-left: auto;
+  overflow: hidden;
+}
+
+.home-filter__page-btn {
+  text-decoration: none;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  margin-right: 2px;
+  border-radius: 50%;
+  color: #333;
+  text-align: center;
+}
+
+.home-product {
+  margin: 14px 0 0 10px;
+}
+.home-product__img {
+  overflow: hidden;
+  // height: 230px;
+}
+
+.home-product__img--link:hover .home-product__img--title {
+  transform: scale(1.1);
+  box-shadow: 0 1px 20px rgba(0, 0, 0, 0.5);
+}
+
+.home-product__item {
+  margin-right: 10px;
+  position: relative;
+  background: #fff;
+  padding-bottom: 10px;
+  overflow: hidden;
+  border-bottom-left-radius: 2px;
+  border-bottom-right-radius: 2px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  margin-bottom: 10px;
+}
+
+.home-product__img--title {
+  background-size: cover;
+  transition: transform linear 0.2s;
+  
+}
+.home-product__category--btn {
+  transition: transform 0.2s;
+}
+
+.home-product__category--btn:hover {
+  transform: scale(1.2);
+}
+
+.home-product__content {
+  margin: 6px 0 6px 0;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: capitalize;
+}
+
+.home-product__content--title {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100px;
+}
+
+.home-product__price {
+  text-align: center;
+  color: #ed4d27;
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.home-product__category {
+  display: flex;
+  margin-left: 10px;
+  margin-top: 12px;
+}
+.home-product__category .home-product__category--btn {
+  border: 1px solid #ebebeb;
+  font-size: 2rem;
+  width: 43px;
+  background: #fff;
+  font-weight: 800;
+  height: 43px;
+}
+
+.home-product__category--count {
+  background: #fff;
+  width: 55px;
+  height: 43px;
+  font-size: 1.6rem;
+  text-align: center;
+  padding-top: 8px;
+  font-weight: 800;
+  border: 1px solid #ebebeb;
+}
+
+.home-product__icon {
+  display: flex;
+  margin: auto;
+  font-size: 1.4rem;
+  border: 1px solid;
+  border-color: #ed4d27;
+  padding: 5px;
+  border-radius: 50%;
+}
+.home-product-item__top:hover,
+.home-product__icon:hover {
+  cursor: pointer;
+}
+
+.home-product-item__top {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 36px;
+  background-color: #ed4d27;
+  text-align: center;
+}
+.home-product-item__top-precent {
+  color: #fff;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 2.1;
+}
+
+.home-product-item__top-precent::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-width: 12px 20px 0;
+  border-color: #ed4d27 transparent transparent transparent;
+  border-style: solid;
+  top: 36px;
+}
+
+.pagination {
+  margin: 20px 0;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  align-items: center;
+}
+
+
+
+
+.pagination .home-filter__page-btn {
+  margin: 0 38px 0 32px;
+  font-size: 1.6rem;
+  color: rgba(182, 182, 182, 1);
+}
+
+.pagination-item__link {
+  text-decoration: none;
+  color: #9a9a9a;
+  font-size: 2rem;
+  padding: 0 24px;
+  margin: 0 10px;
+}
+
+.pagination-item__link--active {
+  min-width: 40px;
+  height: 30px;
+  border-radius: 7px;
+  color: #fff;
+  background: #ed4d27;
+}
+// mobile and tablet
+@media (max-width: 1023px) {
+  .hide-on-mobil-tablet {
+    display: none;
+  }
+
+  .home-filter {
+    margin-left: 0;
+  }
+  .home-filter__page-btn {
+    display: none;
+  }
+   .home-product__content--title {
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+  
+}
+// tablet
+@media (min-width: 768px) and (max-width: 1023px) {
+  .hide-on-tablet {
+    display: none;
+  }
+
+  .home-filter {
+    padding: 12px 14px;
+    max-width: 100%;
+    margin-left: 0;
+    width: 100%;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .home-filter__page-control {
+    display: none;
+  }
+
+  .select-input {
+    min-width: 108px;
+    margin-left: 6px;
+  }
+
+  .home-product__category--btn {
+    width: 30px !important;
+  }
+  .home-product__category--count {
+    width:38px;
+  }
+}
+// mobile
+@media (max-width: 750px) {
+  .hide-on-mobile {
+    display: none;
+  }
+  .select-input__link {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .home-filter {
+    padding: 6px 0%;
+    max-width: 100%;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn {
+    margin: 0 6px;
+    min-width: 62px;
+  }
+
+  .select-input {
+    min-width: 108px;
+    margin-right: 6px;
+    margin-left: 6px;
+  }
+
+  .home-filter__page-control {
+    display: none;
+  }
+  .select-input__link {
+  }
+  .home-product__item {
+    padding-right: 0;
+  }
+
+  .home-product {
+    display: flex;
+    margin: 14px 0 0 0;
+  }
+  .pagination-item__link {
+    font-size: 1.7rem;
+    margin: 0 1px;
+  }
+ 
+}
+
+@media (max-width: 361px) {
+  .select-input {
+    min-width: 100px;
+    margin-right: 20px;
+  }
+  .home-filter__page-control {
+    display: none;
+  }
+  .home-filter {
+    margin-top: 12px;
+  }
+}
+@media (max-width: 320px) {
+  .select-input {
+    min-width: 62px;
+    margin-right: 6px;
+  }
+  .home-filter__page-control {
+    display: none;
+  }
+  .home-filter {
+    margin-top: 12px;
+    margin-left: 0;
+  }
+  .pagination-item__link {
+    padding: 0 16px;
+  }
+}
+
+@media (min-width: 280px) {
+  .btn {
+    margin: 0 3px;
+    min-width: 55px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-product__img--title {
+    width: 230px;
+    height: 230px;
+  }
+}
+@media (max-width: 1024px) {
+  .home-product__img--link {
+    display: block;
+  }
+  .home-product__img--title {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@media (max-width: 564px) {
+  .home-product__item {
+    margin-right: 0px;
+  }
+}
+@media (max-width: 764px) {
+  .home-product__item {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 991px) {
+  a:hover {
+    color: #ed4d27 !important;
+  }
+  .pagination-item__link:hover {
+    background-color: #ed4d27;
+    border-radius: 7px;
+    color: #fff !important;
+  }
+}
+
+// @media (min-width: 538px) {
+//   .home-product__item {
+//     margin-right: 10px;
+//   }
+// }
+</style>

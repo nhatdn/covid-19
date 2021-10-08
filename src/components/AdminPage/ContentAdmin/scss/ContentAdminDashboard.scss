@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap");
+
+$font-family: "Open Sans", sans-serif;
+$font-logo: "Bonheur Royale", cursive;
+$primary-color: #ee4d2d;
+$primary-color-dark: #b30d00;
+$primary-color-light: #ff8059;
+$optional-color: #fff;
+$header-height: 60px;
+
+.ContentAdmin {
+  font-family: $font-family;
+}
+.overview {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 15px;
+
+  padding: 10px;
+  &__box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    padding: 20px;
+
+    border-radius: 10px;
+    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+
+    background: $optional-color;
+
+    &--number {
+      font-size: 32px;
+      font-weight: 600;
+    }
+    &--text {
+      font-size: 20px;
+    }
+    &--icon {
+      display: flex;
+      justify-content: center;
+
+      font-size: 60px;
+    }
+  }
+}
+.second-row {
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  grid-gap: 15px;
+
+  padding: 10px;
+}
+.box {
+  padding: 20px;
+
+  background: $optional-color;
+
+  border-radius: 10px;
+  box-shadow: 0 10px 20px -8px rgba(0, 0, 0, 0.7);
+  &__heading {
+    font-size: 20px;
+    font-weight: bold;
+  }
+  &__btn {
+    position: relative;
+
+    padding: 7px 30px;
+
+    border: none;
+    border-radius: 10px;
+    outline: none;
+
+    color: $optional-color;
+    background: $primary-color;
+    
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+
+    transition: all 0.5s;
+    &:after {
+      content: "»";
+      position: absolute;
+      top: 7px;
+      right: -20px;
+
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    &:hover {
+      padding-right: 24px;
+      padding-left: 15px;
+    }
+
+    &:hover:after {
+      right: 10px;
+
+      opacity: 1;
+    }
+  }
+  &__product {
+    &--img {
+      width: 40px;
+      height: 40px;
+    }
+    &--name {
+      margin: 10px;
+
+      font-weight: bold;
+    }
+  }
+  &__comment--name {
+    font-weight: bold;
+  }
+}
+@media (min-width: 1024px) {
+  .box {
+    &__btn {
+      &:hover {
+        background: $primary-color-dark;
+      }
+      &:hover &--icon {
+        display: inline-block;
+      }
+    }
+  }
+}

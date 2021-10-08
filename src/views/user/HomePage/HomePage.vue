@@ -1,24 +1,29 @@
 <template>
   <div id="HomePage">
         <FixedMainHeader></FixedMainHeader>
-        <Slider></Slider>
-        <CategoryComponent></CategoryComponent>
-        <Topsearch></Topsearch>
-        <TopBanner></TopBanner>
-        <Sugget></Sugget>
+        
+        <router-view></router-view>
+
+
+        <!--  <Home></Home>-->
+        <!--  <AllProduct></AllProduct> -->
+
+
         <Footer></Footer>
-        <LastFooter></LastFooter> 
+        <LastFooter></LastFooter>
         <Messenger></Messenger>
         <Contact></Contact>
   </div>
 </template>
 <script>
 import FixedMainHeader from "../../../components/FixedMainHeader/FixedMainHeader.vue";
-import Slider from "../../../components/Slider/Slider.vue";
-import CategoryComponent from "../../../components/Category/CategoryComponent.vue";
-import Topsearch from "../../../components/TopSearch/Topsearch.vue";
-import TopBanner from "../../../components/TopSearch/TopBanner.vue";
-import Sugget from "../../../components/Suggest/Suggest.vue";
+
+
+//import Home from "../../../components/Home/Home.vue";
+//import AllProduct from "../../../components/AllProduct/AllProduct.vue";
+
+
+
 import Footer from "../../../components/Footer/Footer.vue";
 import LastFooter from "../../../components/Footer/LastFooter.vue";
 import Messenger from "../../../components/Messenger/Messenger.vue";
@@ -27,11 +32,9 @@ export default {
   name: 'HomePage',
   components: {
     FixedMainHeader,
-    Slider,
-    CategoryComponent,
-    Topsearch,
-    TopBanner,
-    Sugget,
+    
+    //Home,
+    //AllProduct,
     Footer,
     LastFooter,
     Messenger,

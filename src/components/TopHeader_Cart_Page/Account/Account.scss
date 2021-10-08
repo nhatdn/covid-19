@@ -1,0 +1,76 @@
+.account {
+  background-color: #fff;
+  width: 220px;
+  height: 200px;
+  border: 1px solid #c4c4c4;
+  filter: drop-shadow(1px 1px 4px rgba(0, 0, 0, 0.25));
+  border-radius: 5px;
+  position: absolute;
+  z-index: 100;
+  top: 70px;
+  left: auto;
+  right: 12%;
+
+  &::after {
+    content: '';
+    border-right: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom: 20px solid #fff;
+    position: absolute;
+    top: -20px;
+    left: 14px;
+    z-index: 80;
+  }
+
+  &__main {
+    padding: 20px;
+  }
+
+  &__link {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+    padding: 10px 0;
+    display: block;
+    transition: 0.3s;
+  }
+}
+@media (min-width: 1400px) and (max-width: 1600px) {
+  .account {
+    right: 5vw;
+    &::after {
+      left: 56px;
+    }
+  }
+}
+@media (min-width: 1020px) and (max-width: 1199px) {
+  .account {
+    right: 5%;
+    &::after {
+      left: 104px;
+    }
+  }
+}
+@media (min-width: 600px) and (max-width: 991px) {
+  .account {
+    right: 6.5%;
+    &::after {
+      left: 104px;
+    }
+  }
+}
+@media (min-width: 1025px) {
+  .account {
+    &__link {
+      &:hover {
+        color: #ee4d2d;
+      }
+    }
+  }
+}
+@media (max-width: 450px) and (max-width: 767px) {
+  .account {
+    right: 0;
+  }
+}

@@ -1,0 +1,70 @@
+$font-family: "Open Sans", sans-serif;
+$primary-color: #ee4d2d;
+$primary-color-dark: #b30d00;
+$primary-color-light: #ff8059;
+$text-secondary-color: #7b7878;
+$border-color: #c4c4c4;
+$optional-color: #fff;
+$form-border-radius: 10px;
+
+.SidebarAccount {
+  font-family: $font-family;
+  .sidebar {
+    margin-top: 60px;
+    border-color: $border-color;
+    border-radius: $form-border-radius;
+    &__img {
+      &--container {
+        margin-top: 20px;
+      }
+      &--img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+      }
+    }
+    &__text {
+      margin: 20px 0px 30px;
+      padding: 0px 20px;
+      font-weight: 600;
+      text-align: justify;
+    }
+    &__menu {
+      &--option {
+      }
+      &--link {
+        display: block;
+        cursor: pointer;
+        color: $text-secondary-color;
+        padding: 15px 30px;
+        border: none;
+        outline: none;
+        font-size: 17px;
+        font-weight: bold;
+        transition: 0.3s;
+        &.active {
+          color: $optional-color;
+          background-color: $primary-color-light;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .SidebarAccount {
+  .sidebar__menu--link:hover {
+    color: $optional-color;
+    background-color: $primary-color;
+    font-weight: normal;
+  }
+}}
+
+@media (max-width: 768px) {
+  .SidebarAccount {
+    .content {
+      transform: translateY(-50px);
+    }
+  }
+}

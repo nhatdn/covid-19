@@ -1,0 +1,73 @@
+.Topsearch {
+  background-color: #f5f5f5;
+}
+.topsearch {
+  background-color: #fff;
+  &__title {
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 41px;
+    color: #ed4d27;
+    padding: 20px;
+  }
+
+  &__slider {
+    height: 250px;
+    width: 202px;
+    margin-bottom: 25px;
+    overflow: hidden;
+  }
+}
+@media screen and (max-width: 1399px) {
+  .topsearch {
+    &__slider {
+      height: 220px;
+      width: 172px;
+    }
+  }
+}
+@media (max-width: 1199px) {
+  .topsearch {
+    &__slider {
+      height: 210px;
+      width: 172px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .topsearch {
+    &__slider {
+      height: 180px;
+      width: 161px;
+    }
+  }
+}
+
+@media (max-width: 465px) {
+  .topsearch {
+    &__title {
+      font-size: 26px;
+      line-height: 30px;
+    }
+    &__slider {
+      height: 240px;
+      width: 187px;
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .topsearch {
+    &__title {
+      font-size: 24px;
+      line-height: 30px;
+    }
+    &__slider {
+      height: 200px;
+      width: 167px;
+    }
+  }
+}

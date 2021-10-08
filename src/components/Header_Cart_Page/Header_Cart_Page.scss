@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+.Header_Cart_Page {
+  background-color: #fff;
+  padding: 15px 0;
+}
+.header {
+  &__logo {
+    &--link {
+      font-family: 'Bonheur Royale', cursive;
+      color: #ee4d2d;
+      font-size: 50px;
+      font-weight: bold;
+      padding-right: 20px;
+    }
+
+    &--img {
+      width: 100px;
+      height: 80px;
+    }
+
+    &--title {
+      color: #ee4d2d;
+      font-weight: 600;
+      font-size: 26px;
+      padding: 10px 20px;
+      border-left: 2px solid #ee4d2d;
+    }
+  }
+
+  &__search {
+    position: relative;
+
+    &--input {
+      min-width: 600px;
+      outline: none;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      border: 2px solid #ee4d2d;
+      padding: 10px 20px;
+    }
+
+    &--block {
+      position: absolute;
+      top: 15px;
+      left: auto;
+      right: 0px;
+    }
+
+    &--icon {
+      font-size: 20px;
+      color: #fff;
+    }
+
+    &--link {
+      transition: 0.3s;
+      padding: 10px 15px;
+      background-color: #ee4d2d;
+    }
+  }
+}
+
+@media (min-width: 1025px) {
+  .header {
+    &__search {
+      &--link {
+        &:hover {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .header__search--input {
+    min-width: 280px;
+  }
+}
+
+@media (max-width: 450px) and (max-width: 767px) {
+  .header {
+    &__logo {
+      justify-content: space-around;
+      padding-bottom: 10px;
+      &--img {
+        width: 80px;
+        height: 60px;
+      }
+    }
+    display: block !important;
+    &__search {
+      text-align: center;
+      &--input {
+        min-width: 320px;
+      }
+
+      &--block {
+        top: 14px;
+        right: 35px;
+      }
+
+      &--link {
+        padding: 11px 15px;
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  .header__search--block {
+    right: 15px;
+  }
+  .header__logo--title {
+    font-size: 24px;
+  }
+}
+@media (max-width: 361px) {
+  .header__search--block {
+    right: 9px;
+  }
+  .header__logo--title {
+    font-size: 23px;
+  }
+  .header__logo--link {
+    font-size: 45px;
+  }
+}

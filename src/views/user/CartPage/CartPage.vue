@@ -17,7 +17,7 @@ import LastFooter from "../../../components/Footer/LastFooter.vue";
 export default {
   name: 'CartPage',
   data(){
-    return {
+    return { 
        
     }
   },

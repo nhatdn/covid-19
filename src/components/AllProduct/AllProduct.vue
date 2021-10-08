@@ -1,5 +1,6 @@
 <template>
   <div class="AllProduct">
+    <Slider></Slider>
     <div class="container">
       <div class="row">
         <div class="col-xxl-3 col-sm-12 col-md-4">
@@ -13,6 +14,7 @@
   </div>
 </template>
 <script>
+import Slider from "../Slider/Slider.vue";
 import Listcattegory from "./Listcategory.vue";
 import ListProduct from "./ListProduct.vue";
 
@@ -20,12 +22,16 @@ export default {
   name: "AllProduct",
   data: function () {
     return {
-      clicked: 0,
+      clicked: 0, 
     };
   },
   components: {
     Listcattegory,
-    ListProduct
+    ListProduct,
+    Slider
+  },
+  created() {
+    document.title = "Danh sách sản phẩm";
   }
 };
 </script>
@@ -61,9 +67,6 @@ export default {
     overflow: hidden;
     margin-top: 0;
   }
-
-  
-  
 }
 @media (max-width: 1023px) {
   .hide-on-mobil-tablet {

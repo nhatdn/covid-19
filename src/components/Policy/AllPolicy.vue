@@ -11,17 +11,16 @@
                 <div class="col-sm-12 col-md-8">
                     <policyContent></policyContent>
                 </div>
-                
             </div>
         </div>
     </div>
 </template>
 
 <script>
+
 import policyHeader from "./policyHeader.vue";
 import policyList from "./policyList.vue";
 import policyContent from "./policyContent.vue";
-
 
 export default {
   name: "AllPolicy",

@@ -1,0 +1,94 @@
+$font-family: "Open Sans", sans-serif;
+$primary-color: #ee4d2d;
+$primary-color-dark: #b30d00;
+$primary-color-light: #ff8059;
+
+$text-secondary-color: #7b7878;
+$border-color: #c4c4c4;
+$btn-cancel-hover-color: gainsboro;
+$optional-color: #fff;
+
+$form-border-radius: 10px;
+
+.ContentAccount {
+  margin-top: 60px;
+  margin-bottom: 100px;
+
+  font-family: $font-family;
+  .content {
+    border-radius: $form-border-radius;
+    border-color: $border-color;
+
+    transition: 0.3s;
+    &__form {
+      padding: 30px 200px 60px 60px;
+
+      &--text {
+        text-align: justify;
+
+        margin: 30px 0px;
+        padding: 0px 20px;
+
+        font-size: 20px;
+        font-weight: 550;
+      }
+      &--component{
+      &---input {
+        margin-top: 10px;
+        &.feedback{
+          height: 200px;
+          resize: none;
+        }
+        &:focus {
+          border-color: $primary-color;
+          box-shadow: $primary-color;
+          box-shadow: none;
+          -webkit-box-shadow: none;
+          -webkit-box-shadow: $primary-color;
+        }
+      }}
+
+      &--btn {
+        &-cancel {
+          margin-left: 30px;
+          width: 100px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  .ContentAccount {
+    .content__form--btn-cancel:hover {
+      background: $btn-cancel-hover-color;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .ContentAccount {
+    padding-top: 0px;
+    .content {
+      transform: translateY(-20px);
+      &__form {
+        padding-right: 60px;
+        &--text {
+          text-align: center;
+        }
+        &--btn {
+          &-container {
+            display: flex;
+            justify-content: center;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 768px) {
+  .ContentAccount {
+    .content {
+      transform: translateY(-50px);
+    }
+  }
+}

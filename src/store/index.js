@@ -1,10 +1,19 @@
-import Vue from 'vue';
-import Vuex from 'vuex';
+import Vue from 'vue'
+import Vuex from 'vuex'
 
-Vue.use(Vuex);
+// Import modules
+import products from './modules/products'
+import carts from './modules/carts'
+
+Vue.use(Vuex)
 
 const storeData = {
-  state: [],
-};
-const store = new Vuex.Store(storeData);
-export default store;
+	modules: {
+		products,
+		carts
+	}
+}
+
+const store = new Vuex.Store(storeData)
+
+export default store

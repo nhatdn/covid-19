@@ -11,49 +11,49 @@
       </h3>
       <ul class="policy-list">
         <li class="policy-item">
-          <a href="" class="policy-item__link--active text-decoration-none">
+          <router-link to="/home/policy" class="policy-item__link--active text-decoration-none">
             <span class="policy-item__title">Chính Sách Bảo Mật</span>
-          </a>
+          </router-link>
         </li>
         <li class="policy-item">
-          <a href="" class="policy-item__link text-decoration-none">
+          <router-link to="/home/policy" class="policy-item__link text-decoration-none">
             <span class="policy-item__title">Chăm Sóc Khách Hàng</span>
-          </a>
+          </router-link>
         </li>
         <li class="policy-item">
-          <a href="" class="policy-item__link text-decoration-none">
+          <router-link to="/home/policy" class="policy-item__link text-decoration-none">
             <span class="policy-item__title">Chính Sách Giao Hàng</span>
-          </a>
+          </router-link>
         </li>
         <li class="policy-item">
-          <a href="" class="policy-item__link text-decoration-none">
+          <router-link to="/home/policy" class="policy-item__link text-decoration-none">
             <span class="policy-item__title">Vận Chuyển</span>
-          </a>
+          </router-link>
         </li>
         <li class="policy-item">
-          <a href="" class="policy-item__link text-decoration-none">
+          <router-link to="/home/policy" class="policy-item__link text-decoration-none">
             <span class="policy-item__title">Chính Sách Bảo Hành</span>
-          </a>
+          </router-link>
         </li>
         <li class="policy-item">
-          <a href="" class="policy-item__link text-decoration-none">
+          <router-link to="/home/policy" class="policy-item__link text-decoration-none">
             <span class="policy-item__title">Thanh Toán</span>
-          </a>
+          </router-link>
         </li>
         <li class="policy-item">
-          <a href="" class="policy-item__link text-decoration-none">
+          <router-link to="/home/policy" class="policy-item__link text-decoration-none">
             <span class="policy-item__title">Điều Khoản Sử Dụng</span>
-          </a>
+          </router-link>
         </li>
         <li class="policy-item">
-          <a href="" class="policy-item__link text-decoration-none">
+          <router-link to="/home/policy" class="policy-item__link text-decoration-none">
             <span class="policy-item__title">Trung Tâm Trợ Giúp</span>
-          </a>
+          </router-link>
         </li>
         <li class="policy-item">
-          <a href="" class="policy-item__link text-decoration-none">
+          <router-link to="/home/policy" class="policy-item__link text-decoration-none">
             <span class="policy-item__title">Helpee Blog</span>
-          </a>
+          </router-link>
         </li>
       </ul>
     </nav>

@@ -61,14 +61,6 @@
           <div class="home-product__price">
             <span class="home-product__price--cg">{{product.cost}}đ</span>
           </div>
-          <!--<div class="home-product__category">
-            <button class="home-product__category--btn" @click.prevent="reduceQuatity()">-</button>
-            <span class="home-product__category--count"> {{quatity}}</span>
-            <button class="home-product__category--btn" @click.prevent="increaseQuatity()">+</button>
-            <div class="home-product__icon">
-              <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
-            </div>
-          </div> -->
           <div class="home-product-item__top">
             <span class="home-product-item__top-precent">Top</span>
           </div>
@@ -141,6 +133,7 @@ export default {
         this.productsLocal = product;
     })
     bus.$on('nhuYeuPhamKhac', (product) => {
+        console.log(product);
         this.productsLocal = product;
     })
     bus.$on('thucPhamDongGoi', (product) => {

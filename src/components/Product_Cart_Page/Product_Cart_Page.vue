@@ -30,7 +30,7 @@
                 <input class="product__input" type="checkbox" name="product-check" id="product-check" />
             </div>
             <div class="product__item d-flex align-items-center">
-                <img class="product__item--img" :src="require(`../../assets/${item.imgUrl}`)" alt="sanpham_1">
+                <img class="product__item--img" :src="require(`../../assets/${item.imgUrl[0]}`)" alt="sanpham_1">
                 <p class="product__item--para">
                     {{item.name}}
                 </p>

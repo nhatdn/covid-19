@@ -27,24 +27,16 @@
                     <div class="main-image">
                         <splide :options="primarySlider">
                             <splide-slide>
-                                <img :src="require(`../../../assets/${productDetail.imgUrl}`)" alt="">
+                                <img :src="require(`../../../assets/${productDetail.imgUrl[0]}`)" alt="">
                             </splide-slide>
                         </splide>
                     </div>
                     <div class="secondary-images">
                         <splide :options="secondarySlider">
-                            <splide-slide>
-                                <img :src="require(`../../../assets/${productDetail.imgUrl}`)" alt="">
+                            <splide-slide v-for="(item,index) in productDetail.imgUrl" :key="index">
+                                <img :src="require(`../../../assets/${item}`)" alt="">
                             </splide-slide>
-                            <splide-slide>
-                                <img :src="require(`../../../assets/${productDetail.imgUrl}`)" alt="">
-                            </splide-slide>
-                            <splide-slide>
-                                <img :src="require(`../../../assets/${productDetail.imgUrl}`)" alt="">
-                            </splide-slide>
-                            <splide-slide>
-                                <img :src="require(`../../../assets/${productDetail.imgUrl}`)" alt="">
-                            </splide-slide>
+                            
                         </splide>
                     </div>
                 </div>

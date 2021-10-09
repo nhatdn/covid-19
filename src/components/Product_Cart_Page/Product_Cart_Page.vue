@@ -24,125 +24,37 @@
         </div>
       </div>
 
-        <div class="row">
+        <div class="row" v-for="(item,index) in listCart" :key="index">
             <div class="col product d-flex align-items-center">
             <div class="product__item">
                 <input class="product__input" type="checkbox" name="product-check" id="product-check" />
             </div>
             <div class="product__item d-flex align-items-center">
-                <img class="product__item--img" src="../../assets/cart_page/sanpham.png" alt="sanpham_1">
+                <img class="product__item--img" :src="require(`../../assets/${item.imgUrl}`)" alt="sanpham_1">
                 <p class="product__item--para">
-                    Gạo ST21 A An (5kg)
+                    {{item.name}}
                 </p>
             </div>
             <div class="product__item">
                 <p class="product__item--para">
-                    100.000đ
+                    {{item.cost}}đ
                 </p>
             </div>
             <div class="product__item d-flex align-items-center justify-content-center">
-                <a class="product__item--link" href=""><b-icon class="product__item--icon" icon="dash"></b-icon></a>
-                <p class="product__item--number">1</p>
-                <a class="product__item--link" href=""><b-icon class="product__item--icon" icon="plus"></b-icon></a>
+                <a class="product__item--link" @click="listCart[index].count > 1 ? listCart[index].count-- : listCart[index].count" ><b-icon class="product__item--icon" icon="dash"></b-icon></a>
+                <p class="product__item--number">{{item.count}}</p>
+                <a class="product__item--link" @click="listCart[index].count++"><b-icon class="product__item--icon" icon="plus"></b-icon></a>
             </div>
             <div class="product__item">
-                <p class="product__item--para"><span class="product__item--orange">100.000đ</span></p>
+                <p class="product__item--para"><span class="product__item--orange">{{item.count * item.cost}}đ</span></p>
             </div>
             <div class="product__item">
-                <a class="product__item--link text-decoration-none" href="">Xóa</a>
+                <a class="product__item--link text-decoration-none" @click="deleteProduct(item)">Xóa</a>
             </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col product d-flex align-items-center">
-            <div class="product__item">
-                <input class="product__input" type="checkbox" name="product-check" id="product-check" />
-            </div>
-            <div class="product__item d-flex align-items-center">
-                <img class="product__item--img" src="../../assets/cart_page/sanpham.png" alt="sanpham_1">
-                <p class="product__item--para">
-                    Gạo ST21 A An (5kg)
-                </p>
-            </div>
-            <div class="product__item">
-                <p class="product__item--para">
-                    100.000đ
-                </p>
-            </div>
-            <div class="product__item d-flex align-items-center justify-content-center">
-                <a class="product__item--link" href=""><b-icon class="product__item--icon" icon="dash"></b-icon></a>
-                <p class="product__item--number">1</p>
-                <a class="product__item--link" href=""><b-icon class="product__item--icon" icon="plus"></b-icon></a>
-            </div>
-            <div class="product__item">
-                <p class="product__item--para"><span class="product__item--orange">100.000đ</span></p>
-            </div>
-            <div class="product__item">
-                <a class="product__item--link text-decoration-none" href="">Xóa</a>
-            </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col product d-flex align-items-center">
-            <div class="product__item">
-                <input class="product__input" type="checkbox" name="product-check" id="product-check" />
-            </div>
-            <div class="product__item d-flex align-items-center">
-                <img class="product__item--img" src="../../assets/cart_page/sanpham.png" alt="sanpham_1">
-                <p class="product__item--para">
-                    Gạo ST21 A An (5kg)
-                </p>
-            </div>
-            <div class="product__item">
-                <p class="product__item--para">
-                    100.000đ
-                </p>
-            </div>
-            <div class="product__item d-flex align-items-center justify-content-center">
-                <a class="product__item--link" href=""><b-icon class="product__item--icon" icon="dash"></b-icon></a>
-                <p class="product__item--number">1</p>
-                <a class="product__item--link" href=""><b-icon class="product__item--icon" icon="plus"></b-icon></a>
-            </div>
-            <div class="product__item">
-                <p class="product__item--para"><span class="product__item--orange">100.000đ</span></p>
-            </div>
-            <div class="product__item">
-                <a class="product__item--link text-decoration-none" href="">Xóa</a>
-            </div>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col product d-flex align-items-center">
-            <div class="product__item">
-                <input class="product__input" type="checkbox" name="product-check" id="product-check" />
-            </div>
-            <div class="product__item d-flex align-items-center">
-                <img class="product__item--img" src="../../assets/cart_page/sanpham.png" alt="sanpham_1">
-                <p class="product__item--para">
-                    Gạo ST21 A An (5kg)
-                </p>
-            </div>
-            <div class="product__item">
-                <p class="product__item--para">
-                    100.000đ
-                </p>
-            </div>
-            <div class="product__item d-flex align-items-center justify-content-center">
-                <a class="product__item--link" href=""><b-icon class="product__item--icon" icon="dash"></b-icon></a>
-                <p class="product__item--number">1</p>
-                <a class="product__item--link" href=""><b-icon class="product__item--icon" icon="plus"></b-icon></a>
-            </div>
-            <div class="product__item">
-                <p class="product__item--para"><span class="product__item--orange">100.000đ</span></p>
-            </div>
-            <div class="product__item">
-                <a class="product__item--link text-decoration-none" href="">Xóa</a>
-            </div>
-            </div>
-        </div>
+        
 
         <div class="row">
         <div class="col product-total d-flex align-items-center">
@@ -157,11 +69,11 @@
           <div class="product-total__item">
             <p class="product-total__secondary ">
                 Tổng Thanh Toán: 
-                <span class="product-total__item--orange">0đ</span>
+                <span class="product-total__item--orange"> {{ totalPrice }}đ</span>
             </p>
           </div>
-          <div class="product-total__item text-center">
-            <a class="product-total__buy text-decoration-none" href="">Mua ngay</a>
+          <div class="product-total__item text-center" style="cursor: pointer;">
+            <a class="product-total__buy text-decoration-none"  @click.prevent="routePaytoCart()" >Mua ngay</a>
           </div>
         </div>
       </div>
@@ -173,8 +85,42 @@
 export default {
   name: "Product_Cart_Page",
   data: function() {
-    return {};
+    return {
+      listCart: []
+    }
   },
+  created() {
+    this.listCart = JSON.parse(sessionStorage.getItem('cart'));
+  },
+  computed: {
+    totalPrice() {
+      var money = 0;
+      this.listCart.forEach(item =>{
+          money += (item.cost * item.count);
+      })
+      return money;
+    },
+  },
+  watch: {
+    listCart: {
+      handler() {
+        sessionStorage.setItem('cart',JSON.stringify(this.listCart));
+      },
+      deep: true
+    }
+  },
+  methods: {
+    deleteProduct(product) {
+      const index = this.listCart.indexOf(product);
+      if (index > -1) {
+        this.listCart.splice(index, 1);
+        sessionStorage.setItem('cart',JSON.stringify(this.listCart));
+      }
+    },
+    routePaytoCart(){
+        this.$router.push("/home/thu-tuc-thanh-toan");
+    }
+  }
 };
 </script>
 <style scoped lang="scss">

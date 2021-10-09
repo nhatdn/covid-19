@@ -54,8 +54,8 @@
             <span class="topbar__icons--container"
               ><b-icon class="topbar__icons--icon" icon="chat-text"></b-icon
             ></span>
-            <span class="topbar__icons--container"
-              ><b-icon class="topbar__icons--icon" icon="bell"></b-icon
+            <span class="topbar__icons--container" style="color: gray;" @click="logout()"
+              ><b-icon class="topbar__icons--icon" icon="arrow-right-circle-fill"></b-icon
             ></span>
             <router-link to="/account-body" style="color: gray;">
               <span class="topbar__icons--container"
@@ -101,15 +101,16 @@ export default {
         this.showMenu(this.clickMenu);
       } else {
         this.clickMenu = false;
-
       }
-
     });
   },
   methods: {
     showMenu(clickMenu){
       bus.$emit("eventShowMenu", clickMenu);
       this.clickMenu = !this.clickMenu;
+    },
+    logout() {
+      console.log("log out");
     }
   }
 };

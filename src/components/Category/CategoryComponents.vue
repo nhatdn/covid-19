@@ -25,9 +25,10 @@ export default {
   data: function () {
     return {
       clicked: 0,
+      
     };
   },
-  computed: mapGetters(['banhKeo']),
+  computed: mapGetters(['banhKeo','luongThuc','giaVi','nhuYeuPhamKhac','thucPhamDongGoi','thucPhamTuoiSong']),
   methods: {    
     dinhTuyenSangSanPham(){
       this.$router.push('/home/product');

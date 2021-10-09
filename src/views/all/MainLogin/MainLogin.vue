@@ -68,30 +68,26 @@ export default {
           console.log("update data at cookie");
           setCookie(md5("username"), md5(this.username), 5);
           setCookie(md5("password"), md5(this.password), 5); 
-          this.$router.push('/admin-page');
+          this.$router.push('/home');
         } else {
           console.log("update data at localStorage")
           localStorage.setItem(md5("username"), md5(this.username));
           localStorage.setItem(md5("password"), md5(this.password));
-          this.$router.push('/admin-page');
+          this.$router.push('/home');
         }
-        
       } else {
         this.message = "Sai mật khẩu hoặc tài khoản";
       }
     },
-
     checking(username = getCookie(md5("username")), password = getCookie(md5("username"))){
       return fetch(API + `?username=${username}&password=${password}`).then(response => response.json());
     }
-
   },
-
   async created(){
     var myPromise = await this.checking();
     if(myPromise.length == 1){
       console.log("you logined at cookie")
-      this.$router.push('/admin-page'); 
+      this.$router.push('/home'); 
     } else {
       this.interfaceLogin = true;
     }

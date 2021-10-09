@@ -1,5 +1,5 @@
 <template>
-  <div class="FixedMainHeader">
+  <div class="fixed-main-header">
     <div>
     <TopbarAccount></TopbarAccount>
     <HeaderAccount></HeaderAccount>
@@ -11,7 +11,7 @@ import TopbarAccount from "./TopbarAccount/TopbarAccount.vue";
 import HeaderAccount from "./HeaderAccount/HeaderAccount.vue";
 
 export default {
-  name: 'FixedMainHeader',
+  name: 'fixed-main-header',
   components: {
     TopbarAccount,
     HeaderAccount
@@ -19,7 +19,7 @@ export default {
 }
 </script>
 <style scoped>
-.FixedMainHeader{
+.fixed-main-header{
   height: 105px;
   width: 100%;
   background: #fff;

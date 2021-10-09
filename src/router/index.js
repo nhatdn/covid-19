@@ -4,25 +4,34 @@ import Page404 from '../views/all/Page404/Page404.vue';
 import HomePage from "../views/user/HomePage/HomePage.vue"
 import AccountBody from "../views/user/AccountBody/AccountBody.vue";
 import CartPage from "../views/user/CartPage/CartPage.vue";
-
+import CheckoutPage from "../views/user/CheckoutPage/CheckoutPage.vue"
 import AllPolicy from "../views/all/AllPolicy/AllPolicy.vue";
-
 import Home from "../components/Home/Home.vue";
 import AllProduct from "../components/AllProduct/AllProduct.vue";
 import ContactUs from "../views/all/ContactUs/ContactUs.vue";
-
-
 import ContentAccount from "../components/AccountBody/ContentAccount/ContentAccount.vue"; // Thông tin cá nhân
 import ContentAccount2 from "../components/AccountBody/ContentAccount/ContentAccount2.vue"; // Lịch sử mua hàng
 import ContentAccount3 from "../components/AccountBody/ContentAccount/ContentAccount3.vue"; // thiết lập tài khoản
 import ContentAccount4 from "../components/AccountBody/ContentAccount/ContentAccount4.vue"; // báo cáo
 import ContentAccount5 from "../components/AccountBody/ContentAccount/ContentAccount5.vue"; // thông báo
+import MainProduct from "../components/Products/MainProduct/MainProduct.vue";
+import ListProduct from "../components/AllProduct/ListProduct.vue"
+import Login from "../views/all/MainLogin/MainLogin.vue"
+
 
 Vue.use(VueRouter);
 
 const router = new VueRouter({
   mode: 'history',
   routes: [
+    {
+      path: '',
+      component: Login,
+      meta: {
+        title: "Đăng nhập",
+        requiresAuth: false,
+      }, 
+    },
     { 
       path: '/home', 
       component: HomePage,
@@ -38,8 +47,19 @@ const router = new VueRouter({
         },
         {
           path: 'product',
-          name : 'product',
           component: AllProduct,
+          children: [
+            {
+              path: '',
+              name : 'product-list',
+              component: ListProduct,
+            },
+            {
+              path: 'product-detail',
+              name: 'product-detail',
+              component: MainProduct
+            },
+          ],
           meta: {
             title: "Danh sách sản phẩm",
             requiresAuth: false,
@@ -72,6 +92,15 @@ const router = new VueRouter({
             requiresAuth: false,
           },
         },
+        { 
+          path: 'thu-tuc-thanh-toan', 
+          name: 'thu-tuc-thanh-toan',
+          component: CheckoutPage,
+          meta: {
+            title: "Thủ tục thanh toán",
+            requiresAuth: false,
+          },
+        }  
       ]
     },
     {
@@ -134,6 +163,15 @@ const router = new VueRouter({
         requiresAuth: false,
       },
     },
+    { 
+      path: '/product-detail', 
+      name: 'Production-detail',
+      component: MainProduct,
+      meta: {
+        title: "Production detail",
+        requiresAuth: false,
+      },
+    },
   ],
   scrollBehavior() {
     return { x: 0, y: 0 };
@@ -144,11 +182,9 @@ router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title} | Chiến binh Covid`;
   next();
 });
+const originalPush = VueRouter.prototype.push;
+VueRouter.prototype.push = function push(location) {
+  return originalPush.call(this, location).catch(err => err)
+};
 
-// getAccountCookie
-/*
-router.beforeEach((to,from,next) => {
-  
-})
-*/
 export default router;

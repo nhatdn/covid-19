@@ -14,10 +14,10 @@
         ></b-icon>
         <ul class="select-input__list">
           <li class="select-input__item">
-            <a href="" class="select-input__link text-decoration-none"
+            <a @click.prevent="sortProductionDown()" class="select-input__link text-decoration-none"
               >giá thấp đến cao</a
             >
-            <a href="" class="select-input__link text-decoration-none"
+            <a @click.prevent="sortProductionUp()" class="select-input__link text-decoration-none"
               >giá cao đến thấp</a
             >
           </li>
@@ -47,7 +47,7 @@
       <div class="col-xxl-3 col-md-4 col-sm-3" v-for="(product, index) in productsLocal" :key="index">
         <div class="home-product__item">
           <div class="home-product__img">
-            <a class="home-product__img--link" href="">
+            <a class="home-product__img--link" @click="routerProductDetail(product)">
               <img
                 class="home-product__img--title"
                 :src="require(`../../assets/${product.imgUrl}`)" 
@@ -59,16 +59,16 @@
             <span class="home-product__content--title">{{ product.name }}</span>
           </div>
           <div class="home-product__price">
-            <span class="home-product__price--cg">{{product.cost}}</span>
+            <span class="home-product__price--cg">{{product.cost}}đ</span>
           </div>
-          <div class="home-product__category">
-            <button class="home-product__category--btn">-</button>
-            <span class="home-product__category--count">1</span>
-            <button class="home-product__category--btn">+</button>
+          <!--<div class="home-product__category">
+            <button class="home-product__category--btn" @click.prevent="reduceQuatity()">-</button>
+            <span class="home-product__category--count"> {{quatity}}</span>
+            <button class="home-product__category--btn" @click.prevent="increaseQuatity()">+</button>
             <div class="home-product__icon">
               <b-icon icon="cart4" class="home-product__icon--icons"></b-icon>
             </div>
-          </div>
+          </div> -->
           <div class="home-product-item__top">
             <span class="home-product-item__top-precent">Top</span>
           </div>
@@ -122,7 +122,8 @@ export default {
   name: "AllProduct",
   data() {
     return {
-      productsLocal: []
+      productsLocal: [],
+      quatity : []
     }
   },
   computed: mapState(['products']),
@@ -149,6 +150,31 @@ export default {
         this.productsLocal = product;
     })
   },
+  methods: {
+    sortProductionDown() {
+      this.productsLocal = this.productsLocal.sort( (a, b) => a.cost - b.cost);
+      console.log(this.productsLocal);
+    },
+    sortProductionUp() {
+      this.productsLocal = this.productsLocal.sort( (a, b) => b.cost - a.cost);
+      console.log(this.productsLocal);
+    },
+    addToCard(){
+
+    },
+    increaseQuatity(){
+        this.quatity +=1;
+    },
+    reduceQuatity(){
+        if(this.quatity > 1) {
+          this.quatity -= 1;
+        }
+    },
+    routerProductDetail(product) {
+      sessionStorage.setItem('product-detail', JSON.stringify(product));
+      this.$router.push('/home/product/product-detail');
+    }
+  }
 };
 </script>
 

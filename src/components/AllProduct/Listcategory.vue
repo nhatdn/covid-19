@@ -70,21 +70,27 @@ export default {
   computed: mapGetters(['banhKeo', 'luongThuc', 'giaVi', 'nhuYeuPhamKhac', 'thucPhamDongGoi','thucPhamTuoiSong']),
   methods: {
     sendBanhKeo() {
+        this.$router.push('/home/product');
         bus.$emit("sendBanhKeo", this.banhKeo);
     },
     sendLuongThuc() {
+        this.$router.push('/home/product');
         bus.$emit("sendLuongThuc", this.luongThuc);
     },
     sendGiaVi() {
+      this.$router.push('/home/product');
       bus.$emit("sendGiaVi", this.giaVi);
     },
     sendNhuYeuPhamKhac() {
+      this.$router.push('/home/product');
       bus.$emit("nhuYeuPhamKhac", this.nhuYeuPhamKhac);
     },
     sendThucPhamDongGoi() {
+      this.$router.push('/home/product');
       bus.$emit("thucPhamDongGoi", this.thucPhamDongGoi);
     },
     sendThucPhamTuoiSong(){
+      this.$router.push('/home/product');
       bus.$emit("thucPhamTuoiSong", this.thucPhamTuoiSong);
     }
   }

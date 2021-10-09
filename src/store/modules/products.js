@@ -3,217 +3,217 @@ const state = {
         {
           name: "Gạo Hoa Lúa",
           type: "luong-thuc",
-          cost: "46.000đ",
+          cost: 125000,
           imgUrl: "productsImage/luongThuc/gaoTe/gaoHoaLua.jpg"
         },
         {
           name: "Gạo 8 Thơm",
           type: "luong-thuc",
-          cost: "49.000đ",
+          cost: 14000,
           imgUrl: "productsImage/luongThuc/gaoTe/gaoThom.jpg"
         },
         {
           name: "Gạo Dẻo",
           type: "luong-thuc",
-          cost: "12.000đ",
+          cost: 120000,
           imgUrl: "productsImage/luongThuc/gaoTe/gaoThomDeo.jpg"
         },
         {
           name: "Gạo thơm A An",
           type: "luong-thuc",
-          cost: "49.000đ",
+          cost: 100000,
           imgUrl: "productsImage/luongThuc/gaoTe/Ann.jpg"
         },
         {
           name: "Khoai Lang",
           type: "luong-thuc",
-          cost: "20.000đ",
+          cost: 25000,
           imgUrl: "productsImage/luongThuc/khoai/khoaiLang.jpg"
         },
         {
           name: "Khoai Mỡ",
           type: "luong-thuc",
-          cost: "32.000đ",
+          cost: 24000,
           imgUrl: "productsImage/luongThuc/khoai/khoaiMo.jpg"
         },
         {
           name: "Khoai Môn",
           type: "luong-thuc",
-          cost: "8.000đ",
+          cost: 26000,
           imgUrl: "productsImage/luongThuc/khoai/khoaiMon.jpg"
         },
         {
           name: "Bắp Mỹ Loại 1",
           type: "luong-thuc",
-          cost: "59.000đ",
+          cost: 29000,
           imgUrl: "productsImage/luongThuc/ngo/bapMy.jpg"
         },
         {
           name: "Bắp Mỹ Loại 2",
           type: "luong-thuc",
-          cost: "59.000đ",
+          cost: 36000,
           imgUrl: "productsImage/luongThuc/ngo/bapMy1.jpg"
         },
         {
           name: "Bắp Nếp",
           type: "luong-thuc",
-          cost: "59.000đ",
+          cost: 25000,
           imgUrl: "productsImage/luongThuc/ngo/bapTrang.jpg"
         },
         {
           name: "Ngũ Cốc Huyết Rồng",
           type: "luong-thuc",
-          cost: "59.000đ",
+          cost: 42000,
           imgUrl: "productsImage/luongThuc/nguCocCacLoai/nguCoc.jpg"
         },
         {
           name: "Ngũ Cốc Oats",
           type: "luong-thuc",
-          cost: "59.000đ",
+          cost: 49000,
           imgUrl: "productsImage/luongThuc/nguCocCacLoai/nguCocDinhDuong.jpg"
         },
         {
           name: "Ngũ Cốc Việt Đài",
           type: "luong-thuc",
-          cost: "59.000đ",
+          cost: 48000,
           imgUrl: "productsImage/luongThuc/nguCocCacLoai/nguCocDinhDuong1.jpg"
         },
         {
           name: "Sắn Đà Nẵng",
           type: "luong-thuc",
-          cost: "59.000đ",
+          cost: 27000,
           imgUrl: "productsImage/luongThuc/san/khoaiSan.png"
         },
         {
           name: "Sẵn Mì",
           type: "luong-thuc",
-          cost: "59.000đ",
+          cost: 29000,
           imgUrl: "productsImage/luongThuc/san/sanNgon.jpg"
         },
         {
           name: "Sẵn Hà Nội",
           type: "luong-thuc",
-          cost: "59.000đ",
+          cost: 24000,
           imgUrl: "productsImage/luongThuc/san/sanNgon1.jpg"
         },
           {
             name: "Bánh Cosy Marie",
             type: "banh-keo",
-            cost: "46.000đ",
+            cost: 46000,
             imgUrl: "productsImage/banhKeo/banh/banhQuy.jpg"
           },
           {
             name: "Choco-Pie Tình",
             type: "banh-keo",
-            cost: "49.000đ",
+            cost: 49000,
             imgUrl: "productsImage/banhKeo/banh/chocoPie.jpg"
           },
           {
             name: "Oreo",
             type: "banh-keo",
-            cost: "12.000đ",
+            cost: 12000,
             imgUrl: "productsImage/banhKeo/banh/socolate.jpg"
           },
           {
             name: "Choco-Pie Dark",
             type: "banh-keo",
-            cost: "49.000đ",
+            cost: 49000,
             imgUrl: "productsImage/banhKeo/banh/Orion.jpg"
           },
           {
             name: "Kẹo sữa Sumika",
             type: "banh-keo",
-            cost: "20.000đ",
+            cost: 32000,
             imgUrl: "productsImage/banhKeo/keo/keoBo.jpg"
           },
           {
             name: "Kẹo Chupa Chups",
             type: "banh-keo",
-            cost: "32.000đ",
+            cost: 32000,
             imgUrl: "productsImage/banhKeo/keo/keoDeo.jpg"
           },
           {
             name: "Kẹo Migita",
             type: "banh-keo",
-            cost: "8.000đ",
+            cost: 8000,
             imgUrl: "productsImage/banhKeo/keo/keoMe.jpg"
           },
           {
             name: "Kẹo Galatine",
             type: "banh-keo",
-            cost: "59.000đ",
+            cost: 59000,
             imgUrl: "productsImage/banhKeo/keo/Galatine.jpg"
           },
             {
               name: "Bột ngọt Ajinomoto",
               type: "gia-vi",
-              cost: "59.000đ",
+              cost: 65000,
               imgUrl: "productsImage/giaVi/botNgot/botNgotAjinomoto.jpg"
             },
             {
               name: "Bột Ngọt hạt nhỏ",
               type: "gia-vi",
-              cost: "59.000đ",
+              cost: 56000,
               imgUrl: "productsImage/giaVi/botNgot/botNgotHatNho.jpg"
             },
             {
               name: "Bột Ngọt hạt lớn",
               type: "gia-vi",
-              cost: "59.000đ",
+              cost: 48000,
               imgUrl: "productsImage/giaVi/botNgot/botNgotHatLon.jpg"
             },
             {
               name: "Muối Sa Ớt",
               type: "gia-vi",
-              cost: "59.000đ",
+              cost: 10000,
               imgUrl: "productsImage/giaVi/muoi/muoiSaOt.jpg"
             },
             {
               name: "Muối Tiêu Chanh",
               type: "gia-vi",
-              cost: "59.000đ",
+              cost: 14000,
               imgUrl: "productsImage/giaVi/muoi/muoiTieuChanh.jpg"
             },
             {
               name: "Muối Tiêu đen",
               type: "gia-vi",
-              cost: "59.000đ",
+              cost: 12000,
               imgUrl: "productsImage/giaVi/muoi/muoiTieuDen.jpg"
             },
             {
-              name: "Muối Tiêu đen",
+              name: "Nước Mắm NN",
               type: "gia-vi",
-              cost: "59.000đ",
+              cost: 26000,
               imgUrl: "productsImage/giaVi/nuocMam/nuocMamNamNgu.jpg"
             },
             {
-              name: "Muối Tiêu đen",
+              name: "Nước Mắm PT",
               type: "gia-vi",
-              cost: "59.000đ",
+              cost: 39000,
               imgUrl: "productsImage/giaVi/nuocMam/nuocMamPhanThiet.jpg"
             },
             {
-              name: "Muối Tiêu đen",
+              name: "Nước Mắm Rim",
               type: "gia-vi",
-              cost: "59.000đ",
+              cost: 29000,
               imgUrl: "productsImage/giaVi/nuocMam/nuocMamRin.jpg"
             },
             {
-              name: "Muối Tiêu đen",
+              name: "Tương ớt",
               type: "gia-vi",
-              cost: "59.000đ",
+              cost: 11000,
               imgUrl: "productsImage/giaVi/tuongOt/tuongOt.jpg"
             },
             {
-              name: "Muối Tiêu đen",
+              name: "Tương ớt cay",
               type: "gia-vi",
-              cost: "59.000đ",
+              cost: 14000,
               imgUrl: "productsImage/giaVi/tuongOt/tuongOtCay.jpg"
             },
             {
-              name: "Muối Tiêu đen",
+              name: "Tương ớt gừng",
               type: "gia-vi",
-              cost: "59.000đ",
+              cost: 19000,
               imgUrl: "productsImage/giaVi/tuongOt/tuongOtGungjpg.jpg"
             },
 
@@ -223,103 +223,103 @@ const state = {
               // {
               //   name: "Muối Tiêu đen",
               //   type: "nhu-yeu-pham-khac",
-              //   cost: "59.000đ",
+              //   cost: 59000,
               //   imgUrl: "productsImage/nhuYeuPhamKhac/daoThot/thotGoXaCu.jpg"
               // },
               {
-                name: "Muối Tiêu đen",
+                name: "Thớt Tròn",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 100000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/daoThot/thotTron.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Gel Rửa Tay",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 59000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/nhuyeupham/gelruatay1.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Gel Rửa Tay",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 59000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/nhuyeupham/gelruatay2.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Giấy vệ sinh",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 60000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/nhuyeupham/giayvesinh1.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Giấy vệ sinh",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 80000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/nhuyeupham/giayvesinh2.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Giấy vệ sinh",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 30000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/nhuyeupham/giayvesinh3.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Kem CloseUp",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 45000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/nhuyeupham/kemdanhrangclose.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Kem PS",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 39000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/nhuyeupham/kemdanhrangps.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Khăn Giấy",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 29000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/nhuyeupham/khangiay.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Khẩu trang 3D",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 79000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/nhuyeupham/khautrang3d.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Khẩu Trang 4 lớp",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 50000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/nhuyeupham/khautrang4lop.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Tả Bobby",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 259000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/nhuyeupham/tabobby.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Tả Pamper",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 400000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/nhuyeupham/tapamper.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Khăn Ướt",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 34000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/taDoChoBe/khanUot.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Khăn Ướt",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 39000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/taDoChoBe/khanUot1.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Khăn Ướt Vip",
                 type: "nhu-yeu-pham-khac",
-                cost: "59.000đ",
+                cost: 89000,
                 imgUrl: "productsImage/nhuYeuPhamKhac/taDoChoBe/khanUotCaoCap.jpg"
               },
 
@@ -327,174 +327,174 @@ const state = {
 
 
               {
-                name: "Muối Tiêu đen",
+                name: "Bột Bánh",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 19000,
                 imgUrl: "productsImage/thucPhamDongGoi/botKho/botBanh.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Bột Mì",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 10000,
                 imgUrl: "productsImage/thucPhamDongGoi/botKho/botMi.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Bột Chiên Giòn",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 19000,
                 imgUrl: "productsImage/thucPhamDongGoi/botKho/botTamChienDon.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Cá Mòi",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 19000,
                 imgUrl: "productsImage/thucPhamDongGoi/caHop/caMoi.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Cá Ngứ",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 129000,
                 imgUrl: "productsImage/thucPhamDongGoi/caHop/caNgu.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Cá Trích",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 89000,
                 imgUrl: "productsImage/thucPhamDongGoi/caHop/caTrich.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Sữa có đường",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 29000,
                 imgUrl: "productsImage/thucPhamDongGoi/suaHop/coDuong.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Trà Sữa Matcha",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 39000,
                 imgUrl: "productsImage/thucPhamDongGoi/suaHop/traSuaMatCha.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Sữa VinaMilk",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 30000,
                 imgUrl: "productsImage/thucPhamDongGoi/suaHop/vinamilk.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Bò Nấu Đậu(1hộp)",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 39000,
                 imgUrl: "productsImage/thucPhamDongGoi/thitHop/boNauDau.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Giò Heo",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 129000,
                 imgUrl: "productsImage/thucPhamDongGoi/thitHop/gioHeo.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Sườn Heo(1hộp)",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 35000,
                 imgUrl: "productsImage/thucPhamDongGoi/thitHop/suonHeo.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Bò Bít Tết(1hộp)",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 55000,
                 imgUrl: "productsImage/thucPhamDongGoi/thucphamdonggoi/bobittet.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Cá Ngừ (1hộp)",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 34000,
                 imgUrl: "productsImage/thucPhamDongGoi/thucphamdonggoi/cangu.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Chả cá",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 32000,
                 imgUrl: "productsImage/thucPhamDongGoi/thucphamdonggoi/chaca.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Chả cá hấp",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 39000,
                 imgUrl: "productsImage/thucPhamDongGoi/thucphamdonggoi/chacahap.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Cá viên(1 túi)",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 75000,
                 imgUrl: "productsImage/thucPhamDongGoi/thucphamdonggoi/chacavien.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Chả Lụa(0.5kg)",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 90000,
                 imgUrl: "productsImage/thucPhamDongGoi/thucphamdonggoi/chalua.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Heo hai lát(1hộp)",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 24000,
                 imgUrl: "productsImage/thucPhamDongGoi/thucphamdonggoi/heo2lat.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Sườn hầm đậu(1hộp)",
                 type: "thuc-pham-dong-goi",
-                cost: "59.000đ",
+                cost: 29000,
                 imgUrl: "productsImage/thucPhamDongGoi/thucphamdonggoi/suonham.jpg"
               },
               
 
 
               {
-                name: "Muối Tiêu đen",
+                name: "Cá Hồi(1kg)",
                 type: "thuc-pham-tuoi-song",
-                cost: "59.000đ",
+                cost: 300000,
                 imgUrl: "productsImage/thucPhamTuoiSong/ca/caHoi.jpeg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Cá Nục(1kg)",
                 type: "thuc-pham-tuoi-song",
-                cost: "59.000đ",
+                cost: 50000,
                 imgUrl: "productsImage/thucPhamTuoiSong/ca/caNuc.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Cá Trích(1kg)",
                 type: "thuc-pham-tuoi-song",
-                cost: "59.000đ",
+                cost: 80000,
                 imgUrl: "productsImage/thucPhamTuoiSong/ca/caTrich.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Đùi Gà(1kg)",
                 type: "thuc-pham-tuoi-song",
-                cost: "59.000đ",
+                cost: 70000,
                 imgUrl: "productsImage/thucPhamTuoiSong/giaCam/duiGa.jpg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Mề Gà(0.5kg) ",
                 type: "thuc-pham-tuoi-song",
-                cost: "59.000đ",
+                cost: 50000,
                 imgUrl: "productsImage/thucPhamTuoiSong/giaCam/meGa.jpeg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Ức Gà(1kg)",
                 type: "thuc-pham-tuoi-song",
-                cost: "59.000đ",
+                cost: 60000,
                 imgUrl: "productsImage/thucPhamTuoiSong/giaCam/ucGa.jpeg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Thịt Bò Úc(100g)",
                 type: "thuc-pham-tuoi-song",
-                cost: "59.000đ",
+                cost: 42000,
                 imgUrl: "productsImage/thucPhamTuoiSong/thit/boUc.jpeg"
               },
               {
-                name: "Muối Tiêu đen",
+                name: "Thịt Thăn Bò(1kg)",
                 type: "thuc-pham-tuoi-song",
-                cost: "59.000đ",
+                cost: 270000,
                 imgUrl: "productsImage/thucPhamTuoiSong/thit/thanBo.jpeg"
               },
     ]

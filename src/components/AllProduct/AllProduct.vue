@@ -7,7 +7,8 @@
       <Listcattegory></Listcattegory>
         </div>
       <div class="col-sm-12 col-md-8 col-xxl-9">
-      <ListProduct></ListProduct>
+      <!-- <ListProduct></ListProduct> -->
+        <router-view></router-view>
       </div>
       </div>
     </div>
@@ -16,8 +17,7 @@
 <script>
 import Slider from "../Slider/Slider.vue";
 import Listcattegory from "./Listcategory.vue";
-import ListProduct from "./ListProduct.vue";
-
+//import ListProduct from "./ListProduct.vue";
 
 export default {
   name: "AllProduct",
@@ -28,7 +28,7 @@ export default {
   },
   components: {
     Listcattegory,
-    ListProduct,
+    //ListProduct,
     Slider
   },
 };

@@ -12,11 +12,8 @@
         </p>
         <div class="sugget-item__sub d-flex align-items-center justify-content-around">
             <p class="sugget-item__sub--cod">
-                {{product.cost}}
+                {{product.cost}}đ
             </p>
-            <a class="sugget-item__sub--link" href="">
-                <img class="sugget-item__sub--img" src="../../assets/sugget/cart.png" alt="cart">
-            </a>
         </div>
         </div>
     </div>

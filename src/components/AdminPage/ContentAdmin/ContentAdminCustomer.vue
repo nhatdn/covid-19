@@ -9,6 +9,7 @@
               >Tài Khoản</label
             >
             <input
+              v-model="newAccount.account_name"
               type="text"
               class="content__form--component---input form-control"
               placeholder="Vd: HTD001"
@@ -21,6 +22,7 @@
               >Mật khẩu</label
             >
             <input
+              v-model="newAccount.password"
               type="password"
               class="content__form--component---input form-control"
               id="password"
@@ -39,13 +41,14 @@
               type="text"
               class="content__form--component---input form-control"
               id="account-address"
+              v-model="newAccount.address"
               placeholder="Vd: Hòa Thuận Đông"
               required
             />
           </div>
         </div>
         <div class="content__form--btn-container">
-          <button type="submit" class="content__form--btn btn">
+          <button type="submit" class="content__form--btn btn" @click.prevent="addAccount()">
             Thêm tài khoản
           </button>
         </div>
@@ -180,8 +183,23 @@ export default {
           group_number: "Tổ 1",
         },
       ],
-    };
+      newAccount: {
+          account_name: "",
+          head_name: "",
+          password: "",
+          phone: "",
+          address: "",
+          group_number: "",
+      }
+    }
   },
+  methods: {
+    addAccount() {
+      if  (this.newAccount.account_name != '' && this.newAccount.password != '' && this.newAccount.address != '') {
+        this.account_menu.push(this.newAccount);
+      }
+    }
+  }
 };
 </script>
 

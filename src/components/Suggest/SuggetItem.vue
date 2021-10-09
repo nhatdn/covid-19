@@ -3,7 +3,7 @@
     <div class="sugget-item d-flex flex-column justify-content-between">
         <div class="sugget-item__main">
             <a class="sugget-item__main--link" href="">
-                <img class="sugget-item__main--img" :src="require(`../../assets/${product.imgUrl}`)" alt="product">
+                <img class="sugget-item__main--img" :src="require(`../../assets/${product.imgUrl[0]}`)" alt="product">
             </a>
         </div>
         <div>

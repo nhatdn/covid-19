@@ -6,7 +6,7 @@
           <a class="slides__product--link" href="">
             <img
               class="slides__product--image"
-              :src="require(`../../assets/${product.imgUrl}`)"
+              :src="require(`../../assets/${product.imgUrl[0]}`)"
               alt="product"/>
           </a>
         </div>

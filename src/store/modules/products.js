@@ -1,5 +1,6 @@
 import luongThuc from './product-types/type-luong-thuc.js';
 import thucPhamDongGoi from './product-types/type-thuc-pham-dong-goi.js';
+import thucPhamTuoiSong from './product-types/type-thuc-pham-tuoi-song.js';
 import giaVi from './product-types/type-gia-vi.js';
 import banhKeo from './product-types/type-banh-keo.js';
 import nhuYeuPhamKhac from './product-types/type-nhu-yeu-pham-khac.js';
@@ -8,6 +9,7 @@ const state = {
   products: [
     ...luongThuc,
     ...thucPhamDongGoi,
+    ...thucPhamTuoiSong,
     ...giaVi,
     ...banhKeo,
     ...nhuYeuPhamKhac,

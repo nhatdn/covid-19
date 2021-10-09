@@ -50,7 +50,7 @@
             <a class="home-product__img--link" @click="routerProductDetail(product)">
               <img
                 class="home-product__img--title"
-                :src="require(`../../assets/${product.imgUrl}`)" 
+                :src="require(`../../assets/${product.imgUrl[0]}`)" 
                 alt=""
               />
             </a>

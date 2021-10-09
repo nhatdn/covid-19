@@ -83,8 +83,8 @@
 </template>
 <script>
 
- import {bus} from "../../../main";
-
+import {bus} from "../../../main";
+import { deleteAllCookies } from "../../../handle/index.js"
 
 export default {
   name: "TopbarAccount",
@@ -110,7 +110,7 @@ export default {
       this.clickMenu = !this.clickMenu;
     },
     logout() {
-      console.log("log out");
+      deleteAllCookies();
     }
   }
 };

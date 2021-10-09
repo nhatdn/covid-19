@@ -1,6 +1,5 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-
 import Page404 from '../views/all/Page404/Page404.vue';
 import HomePage from "../views/user/HomePage/HomePage.vue"
 import AccountBody from "../views/user/AccountBody/AccountBody.vue";

@@ -3,7 +3,7 @@
     <div class="header">
       <div class="header__text d-flex align-items-center">
         <b-icon class="header__text--icon" icon="list-ul"></b-icon>
-        <span class="header__text--text">Xác minh tài khoản</span>
+        <span class="header__text--text">{{ title }}</span>
       </div>
       <div
         class="header__search d-flex justify-content-center align-items-center"
@@ -39,13 +39,20 @@
   </div>
 </template>
 <script>
+import {bus} from "../../main.js";
 export default {
   name: "HeaderAdmin",
   data: function () {
     return {
       clicked: 0,
+      title: '',
     };
   },
+  mounted() {
+    bus.$on("sendTitle", (data) => {
+      this.title = data;
+    })
+  } 
 };
 </script>
 

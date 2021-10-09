@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
+
+$font-family: 'Open Sans', sans-serif;
+$font-logo: 'Bonheur Royale', cursive;
+$primary-color: #ee4d2d;
+$primary-color-dark: #b30d00;
+$primary-color-light: #ff8059;
+$optional-color: #fff;
+
+$topbar-height: 55px;
+$navbar-height: 55px;
+
+.TopbarAccount {
+  position: fixed;
+  z-index: 999;
+  background: $optional-color;
+  width: 100%;
+  height: $topbar-height;
+  font-family: $font-family;
+}
+.topbar {
+  position: relative;
+  height: $topbar-height;
+  background: $optional-color;
+  &__logo {
+    &--link {
+      display: block;
+      width: 60px;
+      height: $topbar-height;
+    }
+    &--img {
+      width: 100%;
+      height: 100%;
+    }
+    &--text {
+      color: $primary-color;
+      font-size: 40px;
+      font-weight: bold;
+      font-family: $font-logo;
+    }
+  }
+  &__search {
+    position: relative;
+    &--input {
+      width: 300px;
+      border-radius: 20px;
+
+      &:focus {
+        border-color: $primary-color;
+        box-shadow: $primary-color;
+        box-shadow: none;
+        -webkit-box-shadow: $primary-color;
+        -webkit-box-shadow: none;
+      }
+    }
+    &--icon {
+      position: absolute;
+      right: 30px;
+    }
+    &--icon-container {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      right: 30px;
+      outline: none;
+      border-radius: 50%;
+
+      border: none;
+      background: $optional-color;
+    }
+  }
+  &__icons {
+    position: relative;
+    display: inline-block;
+    padding: 5px 10px;
+
+    &--icon {
+      font-size: 25px;
+      transition: 0.2s;
+    }
+    &--menu-btn {
+      display: none;
+      cursor: pointer;
+      width: 30px;
+      height: 30px;
+      justify-content: center;
+      align-items: center;
+      transition: all 0.5s ease-in-out;
+      &.open &__burger {
+        transform: translateX(-50px);
+        background: transparent;
+        box-shadow: none;
+      }
+      &.open &__burger::before {
+        transform: rotate(45deg) translate(35px, -35px);
+      }
+      &.open &__burger::after {
+        transform: rotate(-45deg) translate(35px, 35px);
+      }
+      &__burger {
+        display: none;
+        background: $optional-color;
+        width: 30px;
+        height: 3px;
+        border-radius: 3px;
+        transition: all 0.5s ease-in-out;
+        box-shadow: 0 1px 3px rgba(255, 101, 47, 0.2);
+        &::before {
+          transform: translateY(-10px);
+        }
+        &::after {
+          transform: translateY(10px);
+        }
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          background: $optional-color;
+          width: 30px;
+          height: 3px;
+          border-radius: 3px;
+          transition: all 0.5s ease-in-out;
+          box-shadow: 0 1px 3px rgba(255, 101, 47, 0.2);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .topbar {
+    &__search--icon:hover,
+    &__icons--icon:hover {
+      cursor: pointer;
+      color: $primary-color;
+      transform: scale(1.1);
+    }
+    &__search {
+      &--input {
+        display: block;
+      }
+      &--icon-container:hover {
+        background-color: $primary-color-light;
+        color: $optional-color;
+        overflow: hidden;
+        animation: pulse;
+        animation-duration: 1s;
+      }
+      &--icon-container:hover &--icon {
+      }
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .topbar {
+    &__search {
+      &--input {
+        display: block;
+      }
+    }
+    &__icons {
+      &--menu-btn {
+        display: flex;
+        &__burger {
+          display: block;
+        }
+      }
+
+      &--container {
+        padding: 8px 10px;
+        cursor: pointer;
+      }
+      &--icon,
+      &--menu-btn {
+        color: $optional-color;
+        animation: fadeInDown;
+        animation-duration: 1s;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .topbar {
+    &__logo--text {
+      display: none;
+    }
+    &__search {
+      &--input {
+        // display: none;
+        width: 100%;
+      }
+      &--icon {
+        display: block;
+
+        cursor: pointer;
+        font-size: 20px;
+      }
+    }
+  }
+}

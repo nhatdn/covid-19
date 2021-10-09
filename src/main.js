@@ -6,13 +6,15 @@ import VueSplide from '@splidejs/vue-splide';
 import { BootstrapVue, BootstrapVueIcons } from 'bootstrap-vue';
 import 'animate.css';
 import './assets/css/reset.css';
-import router from './router';
+import router from './router/provider.js';
 import store from './store';
 
 Vue.use(VueSplide);
 Vue.use(BootstrapVue);
 Vue.use(BootstrapVueIcons);
 Vue.config.productionTip = false;
+
+export const bus = new Vue();
 
 new Vue({
   el: '#app',

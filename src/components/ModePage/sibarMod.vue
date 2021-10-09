@@ -18,14 +18,36 @@
       </div>
       <div class="sidebar__menu">
         <ul class="sidebar__menu--container list-unstyled">
-          <li
+          <li @click="handleClick('/provider-page/info-page', 'Cập nhật thông tin')"
             class="sidebar__menu--list"
-            v-for="(item, index) in admin_menu"
-            :key="index"
           >
-            <b-icon class="sidebar__menu--icon" :icon="item.icon"></b-icon>
+            <b-icon class="sidebar__menu--icon" icon="house-door-fill"></b-icon>
             <p class="sidebar__menu--link text-decoration-none" href="">
-              {{ item.title }}
+              Cập nhật thông tin
+            </p>
+          </li>
+          <li @click="handleClick('/provider-page/mod-user', 'Xác minh tài khoản')"
+            class="sidebar__menu--list"
+          >
+            <b-icon class="sidebar__menu--icon" icon="house-door-fill"></b-icon>
+            <p class="sidebar__menu--link text-decoration-none" href="">
+              Xác minh tài khoản
+            </p>
+          </li>
+          <li @click="handleClick('/provider-page/mod-admin', 'Quản lý thành viên')"
+            class="sidebar__menu--list"
+          >
+            <b-icon class="sidebar__menu--icon" icon="house-door-fill"></b-icon>
+            <p class="sidebar__menu--link text-decoration-none" href="">
+              Quản lý thành viên
+            </p>
+          </li>
+           <li @click="handleClick('/provider-page/product-mod', 'Quản lý sản phẩm')"
+            class="sidebar__menu--list"
+          >
+            <b-icon class="sidebar__menu--icon" icon="house-door-fill"></b-icon>
+            <p class="sidebar__menu--link text-decoration-none" href="">
+              Quản lý sản phẩm
             </p>
           </li>
         </ul>
@@ -35,7 +57,9 @@
 </template>
 
 <script>
+import {bus} from "../../main.js";
 export default {
+  
   name: "SidebarAdmin",
   data: function () {
     return {
@@ -51,7 +75,15 @@ export default {
       ],
     };
   },
+  methods: {
+    handleClick(e,title){
+      bus.$emit("sendTitle", title);
+      this.$router.push(e);
+    }
+
+  }
 };
+
 </script>
 
 <style scoped lang="scss">

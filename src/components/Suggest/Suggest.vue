@@ -5,59 +5,8 @@
         </div>
         <div class="container suggets">
             <div class="row">
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
-                </div>
-                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item">
-                    <SuggetItem></SuggetItem>     
+                <div class="col-lg-3 col-xxl-2 col-md-3 col-sm-4 col-4 suggets__item" v-for="(item, index) in products.products" :key="index">
+                    <SuggetItem :product="item"></SuggetItem>     
                 </div>
             </div>
         </div>
@@ -75,16 +24,21 @@
 
 <script>
 import SuggetItem from './SuggetItem.vue';
+import { mapState } from 'vuex';
 export default {
   name: 'Sugget',
   components: {
     SuggetItem,
   },
+  computed: mapState(['products']),
+  created() {
+  },
   data: function () {
     return {
       clicked: 0,
     };
-  }
+  },
+  
 }
 </script>
 

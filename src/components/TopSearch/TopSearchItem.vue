@@ -6,12 +6,12 @@
           <a class="slides__product--link" href="">
             <img
               class="slides__product--image"
-              src="../../assets/topsearch/product_1.jpg"
+              :src="require(`../../assets/${product.imgUrl}`)"
               alt="product"/>
           </a>
         </div>
-        <p class="slides__product--title text-left">
-          Gạo
+        <p class="slides__product--title text-center">
+          {{product.name}}
         </p>
         <div class="slides__top">
           <img src="../../assets/topsearch/top.png" alt="top" />
@@ -24,6 +24,9 @@
 <script>
 export default {
   name: "TopsearchItem",
+  props: {
+      product: {},
+  },
 };
 </script>
 

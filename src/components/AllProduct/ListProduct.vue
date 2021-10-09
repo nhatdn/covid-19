@@ -44,7 +44,7 @@
     <div
       class="home-product d-xl-flex flex-wrap d-sm-flex justify-content-center"
     >
-      <div class="col-xxl-3 col-md-4 col-sm-3" v-for="(product, index) in products" :key="index">
+      <div class="col-xxl-3 col-md-4 col-sm-3" v-for="(product, index) in productsLocal" :key="index">
         <div class="home-product__item">
           <div class="home-product__img">
             <a class="home-product__img--link" href="">
@@ -116,201 +116,41 @@
 </template>
 
 <script>
+import { mapState } from 'vuex';
+import { bus } from "../../main.js";
 export default {
   name: "AllProduct",
   data() {
     return {
-      products: []
+      productsLocal: []
     }
   },
-  methods: {
-    banhKeo() {
-      this.products = [
-        {
-          name: "Bánh Cosy Marie",
-          cost: "46.000đ",
-          imgUrl: "productsImage/banhKeo/banh/banhQuy.jpg"
-        },
-        {
-          name: "Choco-Pie Tình",
-          cost: "49.000đ",
-          imgUrl: "productsImage/banhKeo/banh/chocoPie.jpg"
-        },
-        {
-          name: "Oreo",
-          cost: "12.000đ",
-          imgUrl: "productsImage/banhKeo/banh/socolate.jpg"
-        },
-        {
-          name: "Choco-Pie Dark",
-          cost: "49.000đ",
-          imgUrl: "productsImage/banhKeo/banh/Orion.jpg"
-        },
-        {
-          name: "Kẹo sữa Sumika",
-          cost: "20.000đ",
-          imgUrl: "productsImage/banhKeo/keo/keoBo.jpg"
-        },
-        {
-          name: "Kẹo Chupa Chups",
-          cost: "32.000đ",
-          imgUrl: "productsImage/banhKeo/keo/keoDeo.jpg"
-        },
-        {
-          name: "Kẹo Migita",
-          cost: "8.000đ",
-          imgUrl: "productsImage/banhKeo/keo/keoMe.jpg"
-        },
-        {
-          name: "Kẹo Galatine",
-          cost: "59.000đ",
-          imgUrl: "productsImage/banhKeo/keo/Galatine.jpg"
-        }
-      ]
-    },
-    luongThuc(){
-      this.products = [
-        {
-          name: "Gạo Hoa Lúa",
-          cost: "46.000đ",
-          imgUrl: "productsImage/luongThuc/gaoTe/gaoHoaLua.jpg"
-        },
-        {
-          name: "Gạo 8 Thơm",
-          cost: "49.000đ",
-          imgUrl: "productsImage/luongThuc/gaoTe/gaoThom.jpg"
-        },
-        {
-          name: "Gạo Dẻo",
-          cost: "12.000đ",
-          imgUrl: "productsImage/luongThuc/gaoTe/gaoThomDeo.jpg"
-        },
-        {
-          name: "Gạo thơm A An",
-          cost: "49.000đ",
-          imgUrl: "productsImage/luongThuc/gaoTe/Ann.jpg"
-        },
-        {
-          name: "Khoai Lang",
-          cost: "20.000đ",
-          imgUrl: "productsImage/luongThuc/khoai/khoaiLang.jpg"
-        },
-        {
-          name: "Khoai Mỡ",
-          cost: "32.000đ",
-          imgUrl: "productsImage/luongThuc/khoai/khoaiMo.jpg"
-        },
-        {
-          name: "Khoai Môn",
-          cost: "8.000đ",
-          imgUrl: "productsImage/luongThuc/khoai/khoaiMon.jpg"
-        },
-        {
-          name: "Bắp Mỹ Loại 1",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/ngo/bapMy.jpg"
-        },
-        {
-          name: "Bắp Mỹ Loại 2",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/ngo/bapMy1.jpg"
-        },
-        {
-          name: "Bắp Nếp",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/ngo/bapTrang.jpg"
-        },
-        {
-          name: "Ngũ Cốc Huyết Rồng",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/nguCocCacLoai/nguCoc.jpg"
-        },
-        {
-          name: "Ngũ Cốc Oats",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/nguCocCacLoai/nguCocDinhDuong.jpg"
-        },
-        {
-          name: "Ngũ Cốc Việt Đài",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/nguCocCacLoai/nguCocDinhDuong1.jpg"
-        },
-        {
-          name: "Sắn Đà Nẵng",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/san/khoaiSan.png"
-        },
-        {
-          name: "Sẵn Mì",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/san/sanNgon.jpg"
-        },
-        {
-          name: "Sẵn Hà Nội",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/san/sanNgon1.jpg"
-        },
-        {
-          name: "Sẵn Hà Nội",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/cacLoaiBot/botGao.png"
-        },
-        {
-          name: "Sẵn Hà Nội",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/cacLoaiBot/botMy.png"
-        },
-        {
-          name: "Sẵn Hà Nội",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/cacLoaiBot/botNang.png"
-        },
-        {
-          name: "Sẵn Hà Nội",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/san/sanNgon1.jpg"
-        },
-        {
-          name: "Sẵn Hà Nội",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/san/sanNgon1.jpg"
-        },
-        {
-          name: "Sẵn Hà Nội",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/san/sanNgon1.jpg"
-        },
-        {
-          name: "Sẵn Hà Nội",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/san/sanNgon1.jpg"
-        },
-        {
-          name: "Sẵn Hà Nội",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/san/sanNgon1.jpg"
-        },
-        {
-          name: "Sẵn Hà Nội",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/san/sanNgon1.jpg"
-        },
-        {
-          name: "Sẵn Hà Nội",
-          cost: "59.000đ",
-          imgUrl: "productsImage/luongThuc/san/sanNgon1.jpg"
-        },
-      ]
-    },
-    created() {
-      console.log("aaa");
-       
-      
-    }
-  }
+  computed: mapState(['products']),
+  created() {
+    this.productsLocal = this.products.products;
+  },
+  mounted(){
+    bus.$on('sendBanhKeo', (product) => {
+        this.productsLocal = product;
+    })
+    bus.$on('sendLuongThuc', (product) => {
+        this.productsLocal = product;
+    })
+    bus.$on('sendGiaVi', (product) => {
+        this.productsLocal = product;
+    })
+    bus.$on('nhuYeuPhamKhac', (product) => {
+        this.productsLocal = product;
+    })
+    bus.$on('thucPhamDongGoi', (product) => {
+        this.productsLocal = product;
+    })
+    bus.$on('thucPhamTuoiSong', (product) => {
+        this.productsLocal = product;
+    })
+  },
 };
 </script>
-
 
 <style scoped lang="scss">
 @import "ListProduct.scss";

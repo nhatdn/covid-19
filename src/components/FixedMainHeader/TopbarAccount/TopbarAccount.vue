@@ -62,7 +62,7 @@
               ><b-icon class="topbar__icons--icon" icon="person-circle"></b-icon
               ></span>
             </router-link> 
-            <router-link to="/cart" style="color: gray;">
+            <router-link to="/home/cart" style="color: gray;">
             <span class="topbar__icons--container"
               ><b-icon class="topbar__icons--icon" icon="cart3"></b-icon
             ></span>

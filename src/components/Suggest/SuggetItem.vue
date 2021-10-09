@@ -1,21 +1,23 @@
 <template>
   <div class="SuggetItem">
-    <div class="sugget-item">
+    <div class="sugget-item d-flex flex-column justify-content-between">
         <div class="sugget-item__main">
             <a class="sugget-item__main--link" href="">
-                <img class="sugget-item__main--img" src="../../assets/sugget/product_1.jpg" alt="product">
+                <img class="sugget-item__main--img" :src="require(`../../assets/${product.imgUrl}`)" alt="product">
             </a>
         </div>
+        <div>
         <p class="sugget-item__name">
-            Gạo 8 thơm (1kg)
+             {{product.name}}
         </p>
         <div class="sugget-item__sub d-flex align-items-center justify-content-around">
             <p class="sugget-item__sub--cod">
-                18.000đ
+                {{product.cost}}
             </p>
             <a class="sugget-item__sub--link" href="">
                 <img class="sugget-item__sub--img" src="../../assets/sugget/cart.png" alt="cart">
             </a>
+        </div>
         </div>
     </div>
   </div>
@@ -24,6 +26,9 @@
 <script>
 export default {
   name: 'SuggetItem',
+  props: {
+      product: {},
+  },
   data: function () {
     return {
       clicked: 0,
@@ -38,12 +43,12 @@ export default {
     margin: 15px 0;
     &__main {
         overflow: hidden;
-        max-height: 261px;
+        height: 100%;
         &--img {
             width: 100%;
-            object-fit: cover;
-            height: auto;
+            object-fit: contain;
             transition: .3s;
+            height: 100%;
         }
     }
 
@@ -80,6 +85,7 @@ export default {
 
 @media (min-width: 1024px) {
     .sugget-item {
+        height: 305px;
         &__main {
             &--link {
                &:hover .sugget-item__main--img{

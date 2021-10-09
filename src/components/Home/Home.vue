@@ -23,9 +23,6 @@ export default {
     TopBanner,
     Sugget,
     Slider,
-  },
-  created(){
-      document.title = "Trang chủ";
   }
 }
 </script>

@@ -57,9 +57,6 @@ export default {
     };
   },
   components: {
-  },
-  created(){
-    document.title = "Liên hệ";
   }
 };
 </script>

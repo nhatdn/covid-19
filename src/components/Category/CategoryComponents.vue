@@ -1,7 +1,7 @@
 <template>
   <div class="CategoryComponents">
     <div class="category-items">
-      <a class="category--link text-decoration-none" href="">
+      <a class="category--link text-decoration-none" @click.prevent="dinhTuyenSangSanPham()">
         <figure class="category--figure">
           <img class="category--figure__image" :src="require(`../../assets/category/${category.imageUrl}`)" alt="">
         </figure>
@@ -15,6 +15,8 @@
   </div>
 </template>
 <script>
+import { bus } from "../../main.js";
+import {mapGetters} from 'vuex';
 export default {
   name: "CategoryComponents",
   props: {
@@ -25,7 +27,15 @@ export default {
       clicked: 0,
     };
   },
+  computed: mapGetters(['banhKeo']),
   methods: {    
+    dinhTuyenSangSanPham(){
+      this.$router.push('/home/product');
+      console.log(mapGetters(['banhKeo']));
+      setTimeout(()=>{
+        bus.$emit("sendBanhKeo", this.banhKeo);
+      },100)
+    }
   }
 };
 </script>

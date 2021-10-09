@@ -5,35 +5,8 @@
       <div class="row topsearch__row">
         <div class="col-12 topsearch__col">
           <splide :options="options">
-            <splide-slide class="topsearch__slider">
-              <TopsearchItem></TopsearchItem>
-            </splide-slide>
-            <splide-slide class="topsearch__slider">
-              <TopsearchItem></TopsearchItem>
-            </splide-slide>
-            <splide-slide class="topsearch__slider">
-              <TopsearchItem></TopsearchItem>
-            </splide-slide>
-            <splide-slide class="topsearch__slider">
-              <TopsearchItem></TopsearchItem>
-            </splide-slide>
-            <splide-slide class="topsearch__slider">
-              <TopsearchItem></TopsearchItem>
-            </splide-slide>
-            <splide-slide class="topsearch__slider">
-              <TopsearchItem></TopsearchItem>
-            </splide-slide>
-            <splide-slide class="topsearch__slider">
-              <TopsearchItem></TopsearchItem>
-            </splide-slide>
-            <splide-slide class="topsearch__slider">
-              <TopsearchItem></TopsearchItem>
-            </splide-slide>
-            <splide-slide class="topsearch__slider">
-              <TopsearchItem></TopsearchItem>
-            </splide-slide>
-            <splide-slide class="topsearch__slider">
-              <TopsearchItem></TopsearchItem>
+            <splide-slide class="topsearch__slider" v-for="(item, index) in products.products" :key="index">
+              <TopsearchItem :product="item"></TopsearchItem>
             </splide-slide>
           </splide>
         </div>
@@ -43,9 +16,12 @@
 </template>
 
 <script>
+
+import { mapState } from 'vuex';
 import TopsearchItem from "./TopSearchItem.vue";
 import { Splide, SplideSlide } from "@splidejs/vue-splide";
 import "@splidejs/splide/dist/css/themes/splide-default.min.css";
+
 export default {
   name: "Topsearch",
   components: {
@@ -53,6 +29,7 @@ export default {
     Splide,
     SplideSlide,
   },
+  computed: mapState(['products']),
   data: function() {
     return {
       clicked: 0,
@@ -79,6 +56,9 @@ export default {
       },
     };
   },
+  created() {
+    
+  }
 };
 </script>
 

@@ -18,6 +18,7 @@ import Slider from "../Slider/Slider.vue";
 import Listcattegory from "./Listcategory.vue";
 import ListProduct from "./ListProduct.vue";
 
+
 export default {
   name: "AllProduct",
   data: function () {
@@ -30,9 +31,6 @@ export default {
     ListProduct,
     Slider
   },
-  created() {
-    document.title = "Danh sách sản phẩm";
-  }
 };
 </script>
 

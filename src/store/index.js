@@ -3,14 +3,14 @@ import Vuex from 'vuex'
 
 // Import modules
 import products from './modules/products'
-import carts from './modules/carts'
+//import carts from './modules/carts'
 
 Vue.use(Vuex)
 
 const storeData = {
 	modules: {
 		products,
-		carts
+		//carts
 	}
 }
 

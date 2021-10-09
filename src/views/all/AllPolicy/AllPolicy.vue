@@ -33,8 +33,7 @@ export default {
     policyList,
     policyContent,
   },
-  created() {
-    document.title = "Chính sách và điều khoản";
+  created() { 
   }
 };
 </script>

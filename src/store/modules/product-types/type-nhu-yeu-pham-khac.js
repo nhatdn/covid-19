@@ -34,11 +34,11 @@ const nhuYeuPhamKhac = [
     amountStore: 80,
     amountSold: 13,
     imgUrl: [
-      'productsImage/nhuYeuPhamKhac/nhuyeupham/gelruatay1/gelruatay.jpg',
-      'productsImage/nhuYeuPhamKhac/nhuyeupham/gelruatay1/gelruatay1.jpg',
-      'productsImage/nhuYeuPhamKhac/nhuyeupham/gelruatay1/gelruatay2.jpg',
-      'productsImage/nhuYeuPhamKhac/nhuyeupham/gelruatay1/gelruatay3.jpg',
-      'productsImage/nhuYeuPhamKhac/nhuyeupham/gelruatay1/gelruatay4.jpg',
+      'productsImage/nhuYeuPhamKhac/nhuyeupham/gelruatay2/gelruatay.jpg',
+      'productsImage/nhuYeuPhamKhac/nhuyeupham/gelruatay2/gelruatay1.jpg',
+      'productsImage/nhuYeuPhamKhac/nhuyeupham/gelruatay2/gelruatay2.jpg',
+      'productsImage/nhuYeuPhamKhac/nhuyeupham/gelruatay2/gelruatay3.jpg',
+      'productsImage/nhuYeuPhamKhac/nhuyeupham/gelruatay2/gelruatay4.jpg',
     ]
   },
   {

@@ -189,10 +189,10 @@ const luongThuc = [
     amountSold: 13,
     imgUrl: [
       'productsImage/luongThuc/san/sandn/sandn.png',
-      'productsImage/luongThuc/san/sandn/sandn1.png',
-      'productsImage/luongThuc/san/sandn/sandn2.png',
-      'productsImage/luongThuc/san/sandn/sandn3.png',
-      'productsImage/luongThuc/san/sandn/sandn4.png',
+      'productsImage/luongThuc/san/sandn/sandn1.jpg',
+      'productsImage/luongThuc/san/sandn/sandn2.jpg',
+      'productsImage/luongThuc/san/sandn/sandn3.jpg',
+      'productsImage/luongThuc/san/sandn/sandn4.jpg',
     ],
   },
   {
@@ -202,11 +202,11 @@ const luongThuc = [
     amountStore: 35,
     amountSold: 13,
     imgUrl: [
-      'productsImage/luongThuc/san/sanmi/sandn.png',
-      'productsImage/luongThuc/san/sanmi/sandn1.png',
-      'productsImage/luongThuc/san/sanmi/sandn2.png',
-      'productsImage/luongThuc/san/sanmi/sandn3.png',
-      'productsImage/luongThuc/san/sanmi/sandn4.png',
+      'productsImage/luongThuc/san/sanmi/sandn.jpg',
+      'productsImage/luongThuc/san/sanmi/sandn1.jpg',
+      'productsImage/luongThuc/san/sanmi/sandn2.jpg',
+      'productsImage/luongThuc/san/sanmi/sandn3.jpg',
+      'productsImage/luongThuc/san/sanmi/sandn4.jpg',
     ],
   },
   {
@@ -216,11 +216,11 @@ const luongThuc = [
     amountStore: 38,
     amountSold: 13,
     imgUrl: [
-      'productsImage/luongThuc/san/sanhn/sandn.png',
-      'productsImage/luongThuc/san/sanhn/sandn1.png',
-      'productsImage/luongThuc/san/sanhn/sandn2.png',
-      'productsImage/luongThuc/san/sanhn/sandn3.png',
-      'productsImage/luongThuc/san/sanhn/sandn4.png',
+      'productsImage/luongThuc/san/sanhn/sandn.jpg',
+      'productsImage/luongThuc/san/sanhn/sandn1.jpg',
+      'productsImage/luongThuc/san/sanhn/sandn2.jpg',
+      'productsImage/luongThuc/san/sanhn/sandn3.jpg',
+      'productsImage/luongThuc/san/sanhn/sandn4.jpg',
     ],
   },
 ];

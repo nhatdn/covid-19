@@ -7,7 +7,8 @@
         </div>
         <div class="wrapper__right col-lg-9 col-12 p-0">
           <HeaderAdmin></HeaderAdmin>
-          <ContentAdmin></ContentAdmin>
+          <router-view></router-view>
+          <!-- <ContentAdmin></ContentAdmin> -->
         </div>
       </div>
     </div>
@@ -17,7 +18,12 @@
 <script>
 import SidebarAdmin from "./SidebarAdmin/SidebarAdmin.vue";
 import HeaderAdmin from "./HeaderAdmin/HeaderAdmin.vue";
-import ContentAdmin from "./ContentAdmin/ContentAdminInputProduct.vue";
+// import ContentAdmin from "./ContentAdmin/ContentAdmin.vue";
+// import ContentAdminAccount from "./ContentAdmin/ContentAdminAccount.vue";
+// import ContentAdminCustomer from "./ContentAdmin/ContentAdminCustomer.vue";
+// import ContentAdminFeedback from "./ContentAdmin/ContentAdminFeedback.vue";
+// import ContentAdminInputCategory from "./ContentAdmin/ContentAdminInputCategory.vue";
+// import ContentAdminInputProduct from "./ContentAdmin/ContentAdminInputProduct.vue";
 export default {
   name: "App",
   data() {
@@ -26,7 +32,7 @@ export default {
   components: {
     SidebarAdmin,
     HeaderAdmin,
-    ContentAdmin,
+    // ContentAdmin,
   },
 };
 </script>

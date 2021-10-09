@@ -1,7 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap');
 
-$font-family: "Open Sans", sans-serif;
-$font-logo: "Bonheur Royale", cursive;
+$font-family: 'Open Sans', sans-serif;
+$font-logo: 'Bonheur Royale', cursive;
 $primary-color: #ee4d2d;
 $primary-color-dark: #b30d00;
 $primary-color-light: #ff8059;
@@ -52,18 +52,37 @@ $header-height: 60px;
 
       padding: 16px;
       align-items: center;
+
+      &.open {
+        border-top-left-radius: 50px;
+        border-bottom-left-radius: 50px;
+
+        background-color: $optional-color;
+
+        cursor: pointer;
+      }
+
+      &.open .sidebar__menu--icon,
+      &.open .sidebar__menu--link {
+        color: $primary-color-dark;
+
+        font-weight: bolder;
+      }
     }
     &--link {
       color: $optional-color;
 
-      font-size: 22px;
+      font-size: 20px;
     }
     &--icon {
       height: 100%;
 
-      color: $optional-color;
-
       font-size: 28px;
+    }
+
+    &--link,
+    &--icon {
+      color: $optional-color;
     }
   }
 }
@@ -76,7 +95,7 @@ $header-height: 60px;
           border-top-left-radius: 50px;
           border-bottom-left-radius: 50px;
 
-          background-color: $optional-color;
+          background-color: $primary-color-light;
 
           cursor: pointer;
         }

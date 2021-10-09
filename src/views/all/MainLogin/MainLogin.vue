@@ -68,12 +68,12 @@ export default {
           console.log("update data at cookie");
           setCookie(md5("username"), md5(this.username), 5);
           setCookie(md5("password"), md5(this.password), 5); 
-          this.$router.push('/admin-page');
+          this.$router.push('/admin');
         } else {
           console.log("update data at localStorage")
           localStorage.setItem(md5("username"), md5(this.username));
           localStorage.setItem(md5("password"), md5(this.password));
-          this.$router.push('/admin-page');
+          this.$router.push('/admin');
         }
         
       } else {
@@ -91,7 +91,7 @@ export default {
     var myPromise = await this.checking();
     if(myPromise.length == 1){
       console.log("you logined at cookie")
-      this.$router.push('/admin-page'); 
+      this.$router.push('/admin'); 
     } else {
       this.interfaceLogin = true;
     }

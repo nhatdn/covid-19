@@ -9,9 +9,10 @@
               >Tài Khoản</label
             >
             <input
+              v-model.lazy="newAccount.account_name"
               type="text"
               class="content__form--component---input form-control"
-              placeholder="Vd: HTD001"
+              placeholder="Vd: huyn"
               id="account"
               required
             />
@@ -21,6 +22,7 @@
               >Mật khẩu</label
             >
             <input
+              v-model="newAccount.password"
               type="password"
               class="content__form--component---input form-control"
               id="password"
@@ -36,6 +38,7 @@
               >Địa Phương</label
             >
             <input
+              v-model="newAccount.address"
               type="text"
               class="content__form--component---input form-control"
               id="account-address"
@@ -45,7 +48,11 @@
           </div>
         </div>
         <div class="content__form--btn-container">
-          <button type="submit" class="content__form--btn btn">
+          <button
+            type="submit"
+            class="content__form--btn btn"
+            @click.prevent="addAccount"
+          >
             Thêm tài khoản
           </button>
         </div>
@@ -85,6 +92,7 @@
                 ><b-icon
                   icon="trash-fill"
                   class="content__table--icon"
+                  @click="deleteAccount(item.account_name)"
                 ></b-icon>
               </td>
             </tr>
@@ -129,65 +137,103 @@
 
 <script>
 export default {
-  name: "ContentAdmin",
+  name: 'ContentAdmin',
   data: function () {
     return {
       clicked: 0,
       account_menu: [
         {
           id: 1,
-          account_name: "NPK001",
-          head_name: "Trần Văn Kỷ",
-          password: "123123123",
-          phone: "09322125228",
-          address: "Hòa Thuận Đông",
-          group_number: "Tổ 1",
+          account_name: 'provider-hong',
+          head_name: 'Trần Văn Kỷ',
+          password: '123123123',
+          phone: '09322125228',
+          address: 'Hòa Thuận Đông',
+          group_number: 'Tổ 1',
         },
         {
           id: 2,
-          account_name: "NPK001",
-          head_name: "Trần Văn Kỷ",
-          password: "123123123",
-          phone: "09322125228",
-          address: "Hòa Thuận Đông",
-          group_number: "Tổ 1",
+          account_name: 'provider-hoang',
+          head_name: 'Trần Văn Kỷ',
+          password: '123123123',
+          phone: '09322125228',
+          address: 'Hòa Thuận Đông',
+          group_number: 'Tổ 1',
         },
         {
           id: 3,
-          account_name: "NPK001",
-          head_name: "Trần Văn Kỷ",
-          password: "123123123",
-          phone: "09322125228",
-          address: "Hòa Thuận Đông",
-          group_number: "Tổ 1",
+          account_name: 'provider-huy',
+          head_name: 'Trần Văn Kỷ',
+          password: '123123123',
+          phone: '09322125228',
+          address: 'Hòa Thuận Đông',
+          group_number: 'Tổ 1',
         },
         {
           id: 4,
-          account_name: "NPK001",
-          head_name: "Trần Văn Kỷ",
-          password: "123123123",
-          phone: "09322125228",
-          address: "Hòa Thuận Đông",
-          group_number: "Tổ 1",
+          account_name: 'provider-huynh',
+          head_name: 'Trần Văn Kỷ',
+          password: '123123123',
+          phone: '09322125228',
+          address: 'Hòa Thuận Đông',
+          group_number: 'Tổ 1',
         },
         {
           id: 5,
-          account_name: "NPK001",
-          head_name: "Trần Văn Kỷ",
-          password: "123123123",
-          phone: "09322125228",
-          address: "Hòa Thuận Đông",
-          group_number: "Tổ 1",
+          account_name: 'provider-sang',
+          head_name: 'Trần Văn Kỷ',
+          password: '123123123',
+          phone: '09322125228',
+          address: 'Hòa Thuận Đông',
+          group_number: 'Tổ 1',
         },
       ],
+      newAccount: {
+        // id: len,
+        account_name: '',
+        head_name: '',
+        password: '',
+        phone: '',
+        address: '',
+        group_number: '',
+      },
     };
+  },
+  methods: {
+    addAccount() {
+      if (
+        this.newAccount.account_name != '' &&
+        this.newAccount.password != '' &&
+        this.newAccount.address != ''
+      ) {
+        if (!this.newAccount.account_name.startsWith('provider-')) {
+          this.newAccount.account_name = `provider-${this.newAccount.account_name}`;
+        }
+// cho mìn sửa lần cuối
+        const AccountAdd = {
+          ...this.newAccount,
+        };
+        this.account_menu.push(AccountAdd);
+      }
+    },
+    deleteAccount(name) {
+      var index;
+      this.account_menu.forEach(function (value, idx) {
+        if (value.account_name === name) index = idx;
+      });
+      console.log(index);
+      console.log(index);
+      console.log(this.account_menu.splice(index, 1));
+    },
   },
 };
 </script>
 
 <style scoped lang="scss">
-.content{
+.content {
   &__form {
-    width: 100%;}}
-@import "./scss/ContentAdminTypical"
+    width: 100%;
+  }
+}
+@import './scss/ContentAdminTypical';
 </style>

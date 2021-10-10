@@ -154,23 +154,9 @@ export default {
           level: 2,
         },
       ],
-      newAccount: {
-          account_name: "",
-          head_name: "",
-          password: "",
-          phone: "",
-          address: "",
-          group_number: "",
-      }
+      
     };
   },
-  methods: {
-    addAccount() {
-      if  (this.newAccount.account_name != '' && this.newAccount.password != '' && this.newAccount.address != '') {
-        this.account_menu.push(this.newAccount);
-      }
-    }
-  }
 };
 </script>
 

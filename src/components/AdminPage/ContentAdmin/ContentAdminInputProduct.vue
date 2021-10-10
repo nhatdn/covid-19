@@ -6,7 +6,7 @@
         <div class="content__form--two-components">
           <div class="content__form--component py-3">
             <label for="product" class="content__form--component---label"
-              >Tên danh mục</label
+              >Tên sản phẩm</label
             >
             <input
               type="text"

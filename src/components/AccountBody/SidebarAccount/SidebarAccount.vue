@@ -9,7 +9,7 @@
         />
       </div>
       <div class="sidebar__text d-flex justify-content-center">
-        <h5>Đậu Hoàng Phát Tài</h5>
+        <h5>Đậu Hoàng Phát Tài</h5> 
       </div>
 
       <div class="sidebar__menu">

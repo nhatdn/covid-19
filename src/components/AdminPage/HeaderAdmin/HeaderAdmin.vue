@@ -32,6 +32,7 @@
           ><b-icon class="header__icons--icon" icon="bell"></b-icon
         ></span>
         <span class="header__icons--container"
+        @click="logout()"
           ><b-icon class="header__icons--icon" icon="person-circle"></b-icon
         ></span>
       </div>
@@ -39,6 +40,7 @@
   </div>
 </template>
 <script>
+import { deleteAllCookies } from "../../../handle/index.js";
 export default {
   name: "HeaderAdmin",
   data: function () {
@@ -46,6 +48,13 @@ export default {
       clicked: 0,
     };
   },
+  methods: {
+    logout() {
+      deleteAllCookies();
+      localStorage.clear();
+      this.$router.push('/');
+    }
+  }
 };
 </script>
 

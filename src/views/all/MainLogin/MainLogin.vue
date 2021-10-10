@@ -71,7 +71,8 @@ export default {
         } else {
           localStorage.setItem(md5("username"), md5(this.username));
           localStorage.setItem(md5("password"), md5(this.password));
-          this.$router.push('/xac-thuc-thong-tin');
+          //this.$router.push('/xac-thuc-thong-tin');
+          this.$router.push('/admin');
         }
       } else {
         this.message = "Sai mật khẩu hoặc tài khoản";

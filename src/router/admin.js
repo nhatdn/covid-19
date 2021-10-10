@@ -5,14 +5,13 @@ import Page404 from '../views/all/Page404/Page404.vue';
 import AdminPage from '../views/admin/AdminPage.vue';
 import Login from '../views/all/MainLogin/MainLogin';
 
-import AdminDashboard from '../components/AdminPage/ContentAdmin/ContentAdmin.vue';
-import AdminAccount from '../components/AdminPage/ContentAdmin/ContentAdminAccount.vue';
-import AdminCustomer from '../components/AdminPage/ContentAdmin/ContentAdminCustomer.vue';
-import AdminFeedback from '../components/AdminPage/ContentAdmin/ContentAdminFeedback.vue';
-import AdminInputCategory from '../components/AdminPage/ContentAdmin/ContentAdminInputCategory.vue';
-import AdminInputProduct from '../components/AdminPage/ContentAdmin/ContentAdminInputProduct.vue';
 
+import user from "./index.js"
 Vue.use(VueRouter);
+const ADMIN = 0;
+//const USER = 1;
+//const PROVIDER = 2;
+const LEVEL = ADMIN;
 
 const router = new VueRouter({
   mode: 'history',
@@ -28,6 +27,13 @@ const router = new VueRouter({
     {
       path: '/admin',
       component: AdminPage,
+      beforeEnter: (to, from, next) => {
+        if(LEVEL == ADMIN) {
+          next({ path: '/*'})
+        } else {
+          next();
+        }
+      },
       children: [
         {
           path: '',
@@ -100,9 +106,9 @@ const router = new VueRouter({
   },
 });
 
-let author = true;
 router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title} | Chiến binh Covid`;
+  next();
 });
 
 const originalPush = VueRouter.prototype.push;

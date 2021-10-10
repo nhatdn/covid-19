@@ -19,7 +19,25 @@ import ListProduct from "../components/AllProduct/ListProduct.vue"
 import Login from "../views/all/MainLogin/MainLogin.vue"
 import Authentication from "../views/user/InforUpdate/InforUpdate.vue"
 
+
+
+import AdminPage from '../views/admin/AdminPage.vue'
+import AdminDashboard from '../components/AdminPage/ContentAdmin/ContentAdmin.vue';
+import AdminAccount from '../components/AdminPage/ContentAdmin/ContentAdminAccount.vue';
+import AdminCustomer from '../components/AdminPage/ContentAdmin/ContentAdminCustomer.vue';
+import AdminFeedback from '../components/AdminPage/ContentAdmin/ContentAdminFeedback.vue';
+import AdminInputCategory from '../components/AdminPage/ContentAdmin/ContentAdminInputCategory.vue';
+import AdminInputProduct from '../components/AdminPage/ContentAdmin/ContentAdminInputProduct.vue';
+
 Vue.use(VueRouter);
+
+
+const ADMIN = 0;
+//const USER = 1;
+//const PROVIDER = 2;
+const LEVEL = ADMIN;
+
+
 
 const router = new VueRouter({
   mode: 'history',
@@ -40,6 +58,7 @@ const router = new VueRouter({
         requiresAuth: false,
       }, 
     },
+    // user
     { 
       path: '/home', 
       component: HomePage,
@@ -108,60 +127,133 @@ const router = new VueRouter({
             title: "Thủ tục thanh toán",
             requiresAuth: false,
           },
+        },
+        {
+          path: '/account-body',
+          component: AccountBody,
+          children: [
+            {
+              path: '', 
+              name : 'content-account',
+              component: ContentAccount,
+              meta: {
+                title: "Thông tin cá nhân",
+                requiresAuth: false,
+              },
+            },
+            {
+              path: 'purchase-history', 
+              name : 'history',
+              component: ContentAccount2,
+              meta: {
+                title: "Lịch sử mua hàng",
+                requiresAuth: false,
+              },
+            },
+            {
+              path: 'config-account', 
+              name : 'config-account',
+              component: ContentAccount3,
+              meta: {
+                title: "Thiết lập tài khoản",
+                requiresAuth: false,
+              },
+            },
+            {
+              path: 'report', 
+              name : 'report',
+              component: ContentAccount4,
+              meta: {
+                title: "Báo cáo",
+                requiresAuth: false,
+              },
+            },
+            {
+              path: 'notification', 
+              name: 'notification',
+              component: ContentAccount5,
+              meta: {
+                title: "Thông báo",
+                requiresAuth: false,
+              },
+            }
+          ]
         }  
       ]
     },
+    // admin
     {
-      path: '/account-body',
-      component: AccountBody,
+      path: '/admin',
+      component: AdminPage,
+      beforeEnter: (to, from, next) => {
+        if(LEVEL == ADMIN) {
+          next({ path: '/*'})
+        } else {
+          next();
+        }
+      },
       children: [
         {
-          path: '', 
-          name : 'content-account',
-          component: ContentAccount,
+          path: '',
+          name: 'dashboard',
+          component: AdminDashboard,
           meta: {
-            title: "Thông tin cá nhân",
-            requiresAuth: false,
+            title: 'Dashboard',
+            requiresAuth: true,
           },
         },
         {
-          path: 'purchase-history', 
-          name : 'history',
-          component: ContentAccount2,
+          path: 'account',
+          name: 'account',
+          component: AdminAccount,
           meta: {
-            title: "Lịch sử mua hàng",
-            requiresAuth: false,
+            title: 'Account',
+            requiresAuth: true,
           },
         },
         {
-          path: 'config-account', 
-          name : 'config-account',
-          component: ContentAccount3,
+          path: 'customer',
+          name: 'customer',
+          component: AdminCustomer,
           meta: {
-            title: "Thiết lập tài khoản",
-            requiresAuth: false,
+            title: 'Customer',
+            requiresAuth: true,
           },
         },
         {
-          path: 'report', 
-          name : 'report',
-          component: ContentAccount4,
+          path: 'feedback',
+          name: 'feedback',
+          component: AdminFeedback,
           meta: {
-            title: "Báo cáo",
-            requiresAuth: false,
+            title: 'Feedback',
+            requiresAuth: true,
           },
         },
         {
-          path: 'notification', 
-          name: 'notification',
-          component: ContentAccount5,
+          path: 'inputCategory',
+          name: 'inputCategory',
+          component: AdminInputCategory,
           meta: {
-            title: "Thông báo",
-            requiresAuth: false,
+            title: 'Input Category',
+            requiresAuth: true,
           },
-        }
-      ]
+        },
+        {
+          path: 'inputProduct',
+          name: 'inputProduct',
+          component: AdminInputProduct,
+          meta: {
+            title: 'Input Product',
+            requiresAuth: true,
+          },
+        },
+      ],
     },
+
+    
+
+
+    // error
     { 
       path: '*', 
       name: 'error',
@@ -170,7 +262,7 @@ const router = new VueRouter({
         title: "Lỗi 404",
         requiresAuth: false,
       },
-    }
+    },
   ],
   scrollBehavior() {
     return { x: 0, y: 0 };

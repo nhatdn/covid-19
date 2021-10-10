@@ -82,10 +82,8 @@
   </div>
 </template>
 <script>
-
 import {bus} from "../../../main";
-import { deleteAllCookies } from "../../../handle/index.js"
-
+import { deleteAllCookies } from "../../../handle/index.js";
 export default {
   name: "TopbarAccount",
   data: function () {

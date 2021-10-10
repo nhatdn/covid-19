@@ -3,7 +3,7 @@
     <div class="header">
       <div class="header__text d-flex align-items-center">
         <b-icon class="header__text--icon" icon="list-ul"></b-icon>
-        <span class="header__text--text">Xác minh tài khoản</span>
+        <span class="header__text--text">{{ title }}</span>
       </div>
       <div
         class="header__search d-flex justify-content-center align-items-center"
@@ -32,6 +32,7 @@
           ><b-icon class="header__icons--icon" icon="bell"></b-icon
         ></span>
         <span class="header__icons--container"
+        @click="logout()"
           ><b-icon class="header__icons--icon" icon="person-circle"></b-icon
         ></span>
       </div>
@@ -39,19 +40,34 @@
   </div>
 </template>
 <script>
+import {bus} from "../../main.js";
+import { deleteAllCookies } from "../../handle";
 export default {
   name: "HeaderAdmin",
   data: function () {
     return {
       clicked: 0,
+      title: '',
     };
   },
+  mounted() {
+    bus.$on("sendTitle", (data) => {
+      this.title = data;
+    })
+  },
+  methods: {
+    logout() {
+      deleteAllCookies();
+      localStorage.clear();
+      this.$router.push('/');
+      console.log("logout mod provider");
+    }
+  } 
 };
 </script>
 
 <style scoped lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap");
-
 $font-family: "Open Sans", sans-serif;
 $font-logo: "Bonheur Royale", cursive;
 $primary-color: #ee4d2d;
@@ -59,18 +75,14 @@ $primary-color-dark: #b30d00;
 $primary-color-light: #ff8059;
 $optional-color: #fff;
 $header-height: 60px;
-
 .HeaderAdmin {
   height: $header-height;
-
   background: $optional-color;
-
   font-family: $font-family;
 }
 .header {
   display: grid;
   grid-template-columns: 3fr 3fr 3fr;
-
   height: $header-height;
   &__text {
     padding: 20px;
@@ -79,7 +91,6 @@ $header-height: 60px;
     }
     &--text {
       padding-left: 10px;
-
       font-size: 24px;
       font-weight: 550;
     }
@@ -88,9 +99,7 @@ $header-height: 60px;
     position: relative;
     &--input {
       width: 100%;
-
       border-radius: 20px;
-
       &:focus {
         border-color: $primary-color;
         box-shadow: $primary-color;
@@ -103,23 +112,18 @@ $header-height: 60px;
       position: absolute;
       top: 17px;
       right: 20px;
-
       width: 30px;
       height: 30px;
-
       border-radius: 50%;
       border: none;
       outline: none;
-
       background: $optional-color;
     }
   }
   &__icons {
     padding: 5px 10px;
-
     &--icon {
       font-size: 25px;
-
       transition: 0.2s;
     }
   }
@@ -130,7 +134,6 @@ $header-height: 60px;
     &__icons--icon:hover {
       color: $primary-color;
       transform: scale(1.1);
-
       cursor: pointer;
     }
     &__search {
@@ -140,10 +143,8 @@ $header-height: 60px;
       &--icon-container:hover {
         color: $optional-color;
         background-color: $primary-color-light;
-
         animation: pulse;
         animation-duration: 1s;
-
         overflow: hidden;
       }
     }
@@ -154,7 +155,6 @@ $header-height: 60px;
     &__icons {
       &--container {
         padding: 8px 10px;
-
         cursor: pointer;
       }
       &--icon {

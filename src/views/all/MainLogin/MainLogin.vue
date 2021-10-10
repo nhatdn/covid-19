@@ -1,5 +1,5 @@
 <template>
-  <div class="MainLogin" v-if="interfaceLogin">
+  <div class="MainLogin">
     <div class="container-fluid"> 
       <HeaderLogin/>
     </div>
@@ -39,8 +39,8 @@
 <script>
 
 import HeaderLogin from "../../../components/HeaderLogin/HeaderLogin.vue";
-import { API_LOGIN_ADMIN as API } from "../../../API/index.js";
-import { setCookie, getCookie } from "../../../handle/index.js"
+import { API_LOGIN_PROVIDER, API_LOGIN_ADMIN, API_LOGIN_USER } from "../../../API/index.js";
+import { setCookie,  getCookie } from "../../../handle/index.js"
 import md5 from "md5";
 
 export default {
@@ -60,34 +60,67 @@ export default {
   },
   methods: {
     async Login(){
-      const data = await this.checking(md5(this.username),md5(this.password));
-      console.log(md5(this.username));
-      if(data.length === 1 && data[0].username === md5(this.username) && data[0].password === md5(this.password)) {
+      let data = [];
+      let level = 0;
+      var myProvider = await this.checking(API_LOGIN_PROVIDER, md5(this.username), md5(this.password));
+      var myAdmin = await this.checking(API_LOGIN_ADMIN, md5(this.username), md5(this.password));
+      var myUser = await this.checking(API_LOGIN_USER, md5(this.username), md5(this.password));
+      if(myAdmin.length != 0) {
+        data = myAdmin;
+        level = 1;
+      } else if (myProvider.length != 0) {
+         data = myProvider;
+         level = 2;
+      } else if (myUser.length != 0){
+        data = myUser;
+        level = 3;
+      }
+      if (data.length === 1 && data[0].username === md5(this.username) && data[0].password === md5(this.password))  {
         this.message = "";
         if(this.save){
           setCookie(md5("username"), md5(this.username), 5);
           setCookie(md5("password"), md5(this.password), 5); 
-          this.$router.push('/xac-thuc-thong-tin');
+          if(level == 1) {
+              this.$router.push('/admin');
+          } else if (level == 2) {
+              this.$router.push('/provider-page');
+          } else if (level == 3) {
+              this.$router.push('/xac-thuc-thong-tin');
+          }
+          } else {
+            localStorage.setItem(md5("username"), md5(this.username));
+            localStorage.setItem(md5("password"), md5(this.password));
+            if(level == 1) {
+                this.$router.push('/admin');
+            } else if (level == 2) {
+                this.$router.push('/provider-page');
+            } else if (level == 3) {
+                this.$router.push('/xac-thuc-thong-tin');
+            }
+          }
         } else {
-          localStorage.setItem(md5("username"), md5(this.username));
-          localStorage.setItem(md5("password"), md5(this.password));
-          //this.$router.push('/xac-thuc-thong-tin');
-          this.$router.push('/admin');
+          this.interfaceLogin = true;
+          this.message = "Sai mật khẩu hoặc tài khoản";
         }
-      } else {
-        this.message = "Sai mật khẩu hoặc tài khoản";
-      }
     },
-    checking(username = getCookie(md5("username")), password = getCookie(md5("username"))){
-      return fetch(API + `?username=${username}&password=${password}`).then(response => response.json());
+    checking( api ,username, password){
+      console.log(api + `?username=${username}&password=${password}`);
+      return fetch(api + `?username=${username}&password=${password}`).then(response => response.json());
     }
   },
   async created(){
-    var myPromise = await this.checking();
-    if(myPromise.length == 1){
-      this.$router.push('/xac-thuc-thong-tin'); 
-    } else {
-      this.interfaceLogin = true;
+    var myProvider = await this.checking(API_LOGIN_PROVIDER, getCookie(md5("username")) || 'null', getCookie(md5("username")) || 'null');
+    var myAdmin = await this.checking(API_LOGIN_ADMIN, getCookie(md5("username")) || 'null', getCookie(md5("username")) || 'null');
+    var myUser = await this.checking(API_LOGIN_USER, getCookie(md5("username")) || 'null', getCookie(md5("username")) || 'null');
+    console.log(myAdmin);
+    console.log(myProvider);
+    console.log(myUser);
+    if(myUser.length == 1){
+      this.$router.push('/xac-thuc-thong-tin');
+    } else if (myAdmin.length == 1) {
+        this.$router.push('/admin');
+    } else if (myProvider.length == 1) {
+        this.$router.push('/provider-page');
     }
   }
 }

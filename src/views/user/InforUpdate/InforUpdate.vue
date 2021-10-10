@@ -18,7 +18,7 @@ export default {
     },
     data() {
         return {
-            authentication: true
+            authentication: false
         }
     },
     created() {

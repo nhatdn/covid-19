@@ -18,8 +18,8 @@
 
 import SidebarAdmin from "../../components/AdminPage/SidebarAdmin/SidebarAdmin.vue";
 import HeaderAdmin from "../../components/AdminPage/HeaderAdmin/HeaderAdmin.vue";
-import { getCookie } from "../../handle/index.js"
-import md5 from "md5";
+//import { getCookie } from "../../handle/index.js"
+//import md5 from "md5";
 
 export default {
   name: "AdminPage",
@@ -30,12 +30,12 @@ export default {
     SidebarAdmin,
     HeaderAdmin,
   },
-  created() {
+  // created() {
       
-      if(!(getCookie(md5("username")) && getCookie(md5("password"))) && !(localStorage.getItem(md5("username")) && localStorage.getItem(md5("password")))) {
-           this.$router.push('/login');
-      }
-  }
+  //     if(!(getCookie(md5("username")) && getCookie(md5("password"))) && !(localStorage.getItem(md5("username")) && localStorage.getItem(md5("password")))) {
+  //          this.$router.push('/login');
+  //     }
+  // }
 };
 </script>
 <style scoped lang="scss">

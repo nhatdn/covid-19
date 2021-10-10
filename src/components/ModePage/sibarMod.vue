@@ -18,14 +18,36 @@
       </div>
       <div class="sidebar__menu">
         <ul class="sidebar__menu--container list-unstyled">
-          <li
+          <li @click="handleClick('/provider-page', 'Cập nhật thông tin')"
             class="sidebar__menu--list"
-            v-for="(item, index) in admin_menu"
-            :key="index"
           >
-            <b-icon class="sidebar__menu--icon" :icon="item.icon"></b-icon>
+            <b-icon class="sidebar__menu--icon" icon="house-door-fill"></b-icon>
             <p class="sidebar__menu--link text-decoration-none" href="">
-              {{ item.title }}
+              Cập nhật thông tin
+            </p>
+          </li>
+          <li @click="handleClick('/provider-page/mod-user', 'Xác minh tài khoản')"
+            class="sidebar__menu--list"
+          >
+            <b-icon class="sidebar__menu--icon" icon="house-door-fill"></b-icon>
+            <p class="sidebar__menu--link text-decoration-none" href="">
+              Xác minh tài khoản
+            </p>
+          </li>
+          <li @click="handleClick('/provider-page/mod-admin', 'Quản lý thành viên')"
+            class="sidebar__menu--list"
+          >
+            <b-icon class="sidebar__menu--icon" icon="house-door-fill"></b-icon>
+            <p class="sidebar__menu--link text-decoration-none" href="">
+              Quản lý thành viên
+            </p>
+          </li>
+           <li @click="handleClick('/provider-page/product-mod', 'Quản lý sản phẩm')"
+            class="sidebar__menu--list"
+          >
+            <b-icon class="sidebar__menu--icon" icon="house-door-fill"></b-icon>
+            <p class="sidebar__menu--link text-decoration-none" href="">
+              Quản lý sản phẩm
             </p>
           </li>
         </ul>
@@ -35,7 +57,9 @@
 </template>
 
 <script>
+import {bus} from "../../main.js";
 export default {
+  
   name: "SidebarAdmin",
   data: function () {
     return {
@@ -51,55 +75,49 @@ export default {
       ],
     };
   },
+  methods: {
+    handleClick(e,title){
+      bus.$emit("sendTitle", title);
+      this.$router.push(e);
+    }
+  }
 };
 </script>
 
 <style scoped lang="scss">
 // @import "SidebarAdmin.scss";
 @import url("https://fonts.googleapis.com/css2?family=Bonheur+Royale&display=swap");
-
 $font-family: "Open Sans", sans-serif;
 $font-logo: "Bonheur Royale", cursive;
 $primary-color: #ee4d2d;
 $primary-color-dark: #b30d00;
 $primary-color-light: #ff8059;
 $optional-color: #fff;
-
 $header-height: 60px;
-
 .SidebarAdmin {
   padding: 0px;
-
   background-color: $primary-color;
-
   font-family: $font-family;
   min-height: 100vh;
   height: 100%;
 }
-
 .sidebar {
   padding-left: 24px;
-
   &__header {
     height: $header-height;
     line-height: $header-height;
-
     cursor: pointer;
-
     &--link-container {
       display: grid;
       grid-template-columns: 4fr 8fr;
     }
     &--icon {
       color: $primary-color-dark;
-
       font-size: 40px;
       line-height: $header-height;
     }
-
     &--logo {
       color: $optional-color;
-
       font-size: 48px;
       font-weight: bold;
       font-family: $font-logo;
@@ -109,25 +127,20 @@ $header-height: 60px;
     &--list {
       display: grid;
       grid-template-columns: 2fr 8fr;
-
       padding: 16px;
       align-items: center;
     }
     &--link {
       color: $optional-color;
-
       font-size: 22px;
     }
     &--icon {
       height: 100%;
-
       color: $optional-color;
-
       font-size: 28px;
     }
   }
 }
-
 @media screen and (min-width: 1024px) {
   .sidebar {
     &__menu {
@@ -135,16 +148,13 @@ $header-height: 60px;
         &:hover {
           border-top-left-radius: 50px;
           border-bottom-left-radius: 50px;
-
           background-color: $optional-color;
-
           cursor: pointer;
         }
       }
       &--list:hover &--link,
       &--list:hover &--icon {
         color: $primary-color-dark;
-
         font-weight: bolder;
       }
     }

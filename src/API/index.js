@@ -7,3 +7,5 @@ export const API_LOGIN_PROVIDER =
 export const API_LOGIN_USER = 
   'https://6145859338339400175fc5f1.mockapi.io/api/provider/1/user';
   
+export const API_ORDERS =
+  'https://6145859338339400175fc5f1.mockapi.io/api/provider/1/user/1/orders';

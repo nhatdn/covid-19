@@ -53,9 +53,6 @@
             </div>
             </div>
         </div>
-
-        
-
         <div class="row">
         <div class="col product-total d-flex align-items-center">
           <div class="product-total__item d-flex align-items-center">
@@ -77,7 +74,6 @@
           </div>
         </div>
       </div>
-
     </div>
   </div>
 </template>
@@ -126,3 +122,4 @@ export default {
 <style scoped lang="scss">
 @import "Product_Cart_Page.scss";
 </style>
+

@@ -17,7 +17,7 @@ import ContentAccount5 from "../components/AccountBody/ContentAccount/ContentAcc
 import MainProduct from "../components/Products/MainProduct/MainProduct.vue";
 import ListProduct from "../components/AllProduct/ListProduct.vue"
 import Login from "../views/all/MainLogin/MainLogin.vue"
-
+import Authentication from "../views/user/InforUpdate/InforUpdate.vue"
 
 Vue.use(VueRouter);
 
@@ -27,6 +27,14 @@ const router = new VueRouter({
     {
       path: '',
       component: Login,
+      meta: {
+        title: "Đăng nhập",
+        requiresAuth: false,
+      }, 
+    },
+    {
+      path: '/xac-thuc-thong-tin',
+      component: Authentication,
       meta: {
         title: "Đăng nhập",
         requiresAuth: false,
@@ -162,16 +170,7 @@ const router = new VueRouter({
         title: "Lỗi 404",
         requiresAuth: false,
       },
-    },
-    { 
-      path: '/product-detail', 
-      name: 'Production-detail',
-      component: MainProduct,
-      meta: {
-        title: "Production detail",
-        requiresAuth: false,
-      },
-    },
+    }
   ],
   scrollBehavior() {
     return { x: 0, y: 0 };
@@ -186,5 +185,4 @@ const originalPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch(err => err)
 };
-
 export default router;

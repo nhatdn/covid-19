@@ -15,6 +15,16 @@ export default {
         MainInforUpdate,
         HeaderLogin,
         FooterInforUpdate
+    },
+    data() {
+        return {
+            authentication: true
+        }
+    },
+    created() {
+        if(this.authentication) {
+            this.$router.push('/home');
+        }
     }
 }
 </script>

@@ -101,7 +101,7 @@
                         </div>
                     </div>
                     <div class="cart-concern d-flex justify-content-around">
-                        <div class="btn-add-to-cart-wrap" @click="addToCart()">
+                        <div class="btn-add-to-cart-wrap" @click="addToCart()" style="cursor: pointer;">
                             <a  class="d-flex">
                                 <img src="../../../assets/products/cart.png" alt="">
                                 <p>Thêm vào giỏ</p>

@@ -18,7 +18,7 @@ const router = new VueRouter({
   mode: 'history',
   routes: [
     {
-      path: '/login',
+      path: '',
       component: Login,
       meta: {
         title: 'Login',
@@ -87,7 +87,7 @@ const router = new VueRouter({
     },
     {
       path: '*',
-      name: 'error',
+      name: 'Page404',
       component: Page404,
       meta: {
         title: 'Lỗi 404',
@@ -100,14 +100,13 @@ const router = new VueRouter({
   },
 });
 
+let author = true;
 router.beforeEach((to, from, next) => {
   document.title = `${to.meta.title} | Chiến binh Covid`;
-  next();
 });
 
 const originalPush = VueRouter.prototype.push;
 VueRouter.prototype.push = function push(location) {
   return originalPush.call(this, location).catch((err) => err);
 };
-
 export default router;

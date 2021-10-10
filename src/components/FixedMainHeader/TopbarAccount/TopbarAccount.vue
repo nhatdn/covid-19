@@ -54,16 +54,16 @@
             <span class="topbar__icons--container"
               ><b-icon class="topbar__icons--icon" icon="chat-text"></b-icon
             ></span>
-            <span class="topbar__icons--container" style="color: gray;" @click="logout()"
+            <span :title="'Đăng suất'" class="topbar__icons--container" style="color: gray;" @click="logout()"
               ><b-icon class="topbar__icons--icon" icon="arrow-right-circle-fill"></b-icon
             ></span>
             <router-link to="/account-body" style="color: gray;">
-              <span class="topbar__icons--container"
+              <span :title="'Thông tin của bạn'" class="topbar__icons--container"
               ><b-icon class="topbar__icons--icon" icon="person-circle"></b-icon
               ></span>
             </router-link> 
             <router-link to="/home/cart" style="color: gray;">
-            <span class="topbar__icons--container"
+            <span :title="'Giỏ hàng'" class="topbar__icons--container"
               ><b-icon class="topbar__icons--icon" icon="cart3"></b-icon
             ></span>
             </router-link>
@@ -111,6 +111,8 @@ export default {
     },
     logout() {
       deleteAllCookies();
+      localStorage.clear();
+      this.$router.push('/');
     }
   }
 };
